@@ -142,1409 +142,1408 @@ export default function Dashboard({ language = 'ru', userData = {} }) {
     }
   ];
 
-// ============= COMPLETE 8-LANGUAGE TEXT OBJECT =============
-// Replace the existing 'texts' object in Dashboard.jsx with this
-const texts = {
-  ru: {
-    // Header
-    welcome: 'С возвращением',
-    userName: 'Александр',
-    search: 'Поиск',
-    notifications: 'Уведомления',
-    
-    // Cards
-    balance: 'Баланс',
-    cardNumber: 'Номер карты',
-    show: 'Показать',
-    hide: 'Скрыть',
-    debit: 'Дебетовая',
-    
-    // Quick Actions
-    quickActions: 'Быстрые действия',
-    qrPayment: 'Оплата по QR',
-    phonePayment: 'По номеру',
-    sbp: 'СБП',
-    transfer: 'Перевод',
-    
-    // SBP / Utilities
-    sbpFull: 'Платежи и переводы',
-    education: 'Образование',
-    mobile: 'Мобильная связь',
-    electricity: 'Электричество',
-    gas: 'Газ',
-    water: 'Вода',
-    internet: 'Интернет',
-    fines: 'Штрафы',
-    taxes: 'Налоги',
-    
-    // Banks
-    selectBank: 'Выберите банк',
-    sberbank: 'Сбербанк',
-    tbank: 'Т-Банк',
-    alfabank: 'Альфа-Банк',
-    vtb: 'ВТБ',
-    gazprombank: 'Газпромбанк',
-    raiffeisen: 'Райффайзен',
-    otkritie: 'Открытие',
-    pochta: 'Почта Банк',
-    
-    // Analytics
-    analytics: 'Аналитика',
-    thisWeek: 'Эта неделя',
-    thisMonth: 'Этот месяц',
-    thisYear: 'Этот год',
-    income: 'Доход',
-    expenses: 'Расходы',
-    
-    // Categories
-    food: 'Питание',
-    groceries: 'Продукты',
-    transport: 'Транспорт',
-    entertainment: 'Развлечения',
-    utilities: 'Коммунальные',
-    
-    // Fixed Deposits (Gamified)
-    savings: 'Накопления',
-    fixedDeposit: 'Накопительный счёт',
-    investment: 'Инвестиции',
-    goal: 'Цель',
-    current: 'Текущее',
-    interest: 'Ставка',
-    streak: 'Дней подряд',
-    nextMilestone: 'Следующая цель',
-    leftToGoal: 'До цели',
-    replenish: 'Пополнить',
-    fdName1: 'Накопительный',
-    fdName2: 'Инвестиционный',
-    
-    // Debt Reminders
-    debtReminder: 'Напоминание о долгах',
-    mortgage: 'Ипотека',
-    educationDebt: 'Образование',
-    paid: 'Оплачено',
-    remaining: 'Осталось',
-    monthlyPayment: 'Ежемесячный платёж',
-    nextPayment: 'Следующий платёж',
-    days: 'дн.',
-    pay: 'Оплатить',
-    
-    // Recent Transactions
-    recentTransactions: 'Последние операции',
-    viewAll: 'Все',
-    collapse: 'Свернуть',
-    
-    // Bottom Navigation
-    home: 'Главная',
-    payments: 'Платежи',
-    history: 'История',
-    settings: 'Настройки',
-    
-    // QR Scanner
-    scanQR: 'Сканируйте QR-код',
-    alignQR: 'Поместите QR-код в рамку',
-    qrDetected: 'QR-код обнаружен!',
-    
-    // Modals - Common
-    cancel: 'Отмена',
-    continue: 'Продолжить',
-    confirm: 'Подтвердить',
-    back: 'Назад',
-    done: 'Готово',
-    
-    // Payment Modals
-    enterAmount: 'Введите сумму',
-    enterPhone: 'Введите номер телефона',
-    enterAccount: 'Введите номер счета',
-    selectCard: 'Выберите карту',
-    card: 'Карта',
-    amount: 'Сумма',
-    recipient: 'Получатель',
-    processing: 'Обработка платежа',
-    success: 'Платёж успешен',
-    
-    // Card Selection
-    cardNumberMask: '**** {number}',
-    balanceLabel: 'Баланс',
-    
-    // Filter
-    all: 'Все',
-    
-    // Progress text
-    progressFormat: (paid, total) => `Оплачено: ${paid.toLocaleString()} ₽ · Осталось: ${(total - paid).toLocaleString()} ₽`,
-    daysFormat: (days) => `${days} ${days === 1 ? 'день' : days < 5 ? 'дня' : 'дн.'}`,
-    
-    // Month names for date formatting
-    months: {
-      '01': 'янв',
-      '02': 'фев',
-      '03': 'мар',
-      '04': 'апр',
-      '05': 'май',
-      '06': 'июн',
-      '07': 'июл',
-      '08': 'авг',
-      '09': 'сен',
-      '10': 'окт',
-      '11': 'ноя',
-      '12': 'дек'
+  // ============= LANGUAGE OBJECT - SPACE FOR COMPLETE TEXTS =============
+  const texts = {
+    ru: {
+      // Header
+      welcome: 'С возвращением',
+      userName: 'Александр',
+      search: 'Поиск',
+      notifications: 'Уведомления',
+      
+      // Cards
+      balance: 'Баланс',
+      cardNumber: 'Номер карты',
+      show: 'Показать',
+      hide: 'Скрыть',
+      debit: 'Дебетовая',
+      
+      // Quick Actions
+      quickActions: 'Быстрые действия',
+      qrPayment: 'Оплата по QR',
+      phonePayment: 'По номеру',
+      sbp: 'СБП',
+      transfer: 'Перевод',
+      
+      // SBP / Utilities
+      sbpFull: 'Платежи и переводы',
+      education: 'Образование',
+      mobile: 'Мобильная связь',
+      electricity: 'Электричество',
+      gas: 'Газ',
+      water: 'Вода',
+      internet: 'Интернет',
+      fines: 'Штрафы',
+      taxes: 'Налоги',
+      
+      // Banks
+      selectBank: 'Выберите банк',
+      sberbank: 'Сбербанк',
+      tbank: 'Т-Банк',
+      alfabank: 'Альфа-Банк',
+      vtb: 'ВТБ',
+      gazprombank: 'Газпромбанк',
+      raiffeisen: 'Райффайзен',
+      otkritie: 'Открытие',
+      pochta: 'Почта Банк',
+      
+      // Analytics
+      analytics: 'Аналитика',
+      thisWeek: 'Эта неделя',
+      thisMonth: 'Этот месяц',
+      thisYear: 'Этот год',
+      income: 'Доход',
+      expenses: 'Расходы',
+      
+      // Categories
+      food: 'Питание',
+      groceries: 'Продукты',
+      transport: 'Транспорт',
+      entertainment: 'Развлечения',
+      utilities: 'Коммунальные',
+      
+      // Fixed Deposits (Gamified)
+      savings: 'Накопления',
+      fixedDeposit: 'Накопительный счёт',
+      investment: 'Инвестиции',
+      goal: 'Цель',
+      current: 'Текущее',
+      interest: 'Ставка',
+      streak: 'Дней подряд',
+      nextMilestone: 'Следующая цель',
+      leftToGoal: 'До цели',
+      replenish: 'Пополнить',
+      fdName1: 'Накопительный',
+      fdName2: 'Инвестиционный',
+      
+      // Debt Reminders
+      debtReminder: 'Напоминание о долгах',
+      mortgage: 'Ипотека',
+      educationDebt: 'Образование',
+      paid: 'Оплачено',
+      remaining: 'Осталось',
+      monthlyPayment: 'Ежемесячный платёж',
+      nextPayment: 'Следующий платёж',
+      days: 'дн.',
+      pay: 'Оплатить',
+      
+      // Recent Transactions
+      recentTransactions: 'Последние операции',
+      viewAll: 'Все',
+      collapse: 'Свернуть',
+      
+      // Bottom Navigation
+      home: 'Главная',
+      payments: 'Платежи',
+      history: 'История',
+      settings: 'Настройки',
+      
+      // QR Scanner
+      scanQR: 'Сканируйте QR-код',
+      alignQR: 'Поместите QR-код в рамку',
+      qrDetected: 'QR-код обнаружен!',
+      
+      // Modals - Common
+      cancel: 'Отмена',
+      continue: 'Продолжить',
+      confirm: 'Подтвердить',
+      back: 'Назад',
+      done: 'Готово',
+      
+      // Payment Modals
+      enterAmount: 'Введите сумму',
+      enterPhone: 'Введите номер телефона',
+      enterAccount: 'Введите номер счета',
+      selectCard: 'Выберите карту',
+      card: 'Карта',
+      amount: 'Сумма',
+      recipient: 'Получатель',
+      processing: 'Обработка платежа',
+      success: 'Платёж успешен',
+      
+      // Card Selection
+      cardNumberMask: '**** {number}',
+      balanceLabel: 'Баланс',
+      
+      // Filter
+      all: 'Все',
+      
+      // Progress text
+      progressFormat: (paid, total) => `Оплачено: ${paid.toLocaleString()} ₽ · Осталось: ${(total - paid).toLocaleString()} ₽`,
+      daysFormat: (days) => `${days} ${days === 1 ? 'день' : days < 5 ? 'дня' : 'дн.'}`,
+      
+      // Month names for date formatting
+      months: {
+        '01': 'янв',
+        '02': 'фев',
+        '03': 'мар',
+        '04': 'апр',
+        '05': 'май',
+        '06': 'июн',
+        '07': 'июл',
+        '08': 'авг',
+        '09': 'сен',
+        '10': 'окт',
+        '11': 'ноя',
+        '12': 'дек'
+      },
+      
+      // Helper function for utility names
+      getUtilityName: (key) => {
+        const names = {
+          education: 'Образование',
+          mobile: 'Мобильная связь',
+          electricity: 'Электричество',
+          gas: 'Газ',
+          water: 'Вода',
+          internet: 'Интернет',
+          fines: 'Штрафы',
+          taxes: 'Налоги'
+        };
+        return names[key] || key;
+      },
+      
+      // Helper function for bank names
+      getBankName: (key) => {
+        const names = {
+          sber: 'Сбербанк',
+          tbank: 'Т-Банк',
+          alfa: 'Альфа-Банк',
+          vtb: 'ВТБ',
+          gazprom: 'Газпромбанк',
+          raiffeisen: 'Райффайзен',
+          otkritie: 'Открытие',
+          pochta: 'Почта Банк'
+        };
+        return names[key] || key;
+      }
     },
     
-    // Helper function for utility names
-    getUtilityName: (key) => {
-      const names = {
-        education: 'Образование',
-        mobile: 'Мобильная связь',
-        electricity: 'Электричество',
-        gas: 'Газ',
-        water: 'Вода',
-        internet: 'Интернет',
-        fines: 'Штрафы',
-        taxes: 'Налоги'
-      };
-      return names[key] || key;
+    en: {
+      // Header
+      welcome: 'Welcome back',
+      userName: 'Alexander',
+      search: 'Search',
+      notifications: 'Notifications',
+      
+      // Cards
+      balance: 'Balance',
+      cardNumber: 'Card Number',
+      show: 'Show',
+      hide: 'Hide',
+      debit: 'Debit',
+      
+      // Quick Actions
+      quickActions: 'Quick Actions',
+      qrPayment: 'QR Payment',
+      phonePayment: 'By Phone',
+      sbp: 'SBP',
+      transfer: 'Transfer',
+      
+      // SBP / Utilities
+      sbpFull: 'Payments & Transfers',
+      education: 'Education',
+      mobile: 'Mobile',
+      electricity: 'Electricity',
+      gas: 'Gas',
+      water: 'Water',
+      internet: 'Internet',
+      fines: 'Fines',
+      taxes: 'Taxes',
+      
+      // Banks
+      selectBank: 'Select Bank',
+      sberbank: 'Sberbank',
+      tbank: 'T-Bank',
+      alfabank: 'Alfa-Bank',
+      vtb: 'VTB',
+      gazprombank: 'Gazprombank',
+      raiffeisen: 'Raiffeisen',
+      otkritie: 'Otkritie',
+      pochta: 'Pochta Bank',
+      
+      // Analytics
+      analytics: 'Analytics',
+      thisWeek: 'This Week',
+      thisMonth: 'This Month',
+      thisYear: 'This Year',
+      income: 'Income',
+      expenses: 'Expenses',
+      
+      // Categories
+      food: 'Food',
+      groceries: 'Groceries',
+      transport: 'Transport',
+      entertainment: 'Entertainment',
+      utilities: 'Utilities',
+      
+      // Fixed Deposits (Gamified)
+      savings: 'Savings',
+      fixedDeposit: 'Fixed Deposit',
+      investment: 'Investment',
+      goal: 'Goal',
+      current: 'Current',
+      interest: 'Interest',
+      streak: 'Day streak',
+      nextMilestone: 'Next Milestone',
+      leftToGoal: 'Left to Goal',
+      replenish: 'Replenish',
+      fdName1: 'Savings',
+      fdName2: 'Investment',
+      
+      // Debt Reminders
+      debtReminder: 'Debt Reminder',
+      mortgage: 'Mortgage',
+      educationDebt: 'Education',
+      paid: 'Paid',
+      remaining: 'Remaining',
+      monthlyPayment: 'Monthly Payment',
+      nextPayment: 'Next Payment',
+      days: 'days',
+      pay: 'Pay',
+      
+      // Recent Transactions
+      recentTransactions: 'Recent Transactions',
+      viewAll: 'View All',
+      collapse: 'Collapse',
+      
+      // Bottom Navigation
+      home: 'Home',
+      payments: 'Payments',
+      history: 'History',
+      settings: 'Settings',
+      
+      // QR Scanner
+      scanQR: 'Scan QR Code',
+      alignQR: 'Align QR code within frame',
+      qrDetected: 'QR Code detected!',
+      
+      // Modals - Common
+      cancel: 'Cancel',
+      continue: 'Continue',
+      confirm: 'Confirm',
+      back: 'Back',
+      done: 'Done',
+      
+      // Payment Modals
+      enterAmount: 'Enter amount',
+      enterPhone: 'Enter phone number',
+      enterAccount: 'Enter account number',
+      selectCard: 'Select card',
+      card: 'Card',
+      amount: 'Amount',
+      recipient: 'Recipient',
+      processing: 'Processing payment',
+      success: 'Payment successful',
+      
+      // Card Selection
+      cardNumberMask: '**** {number}',
+      balanceLabel: 'Balance',
+      
+      // Filter
+      all: 'All',
+      
+      // Progress text
+      progressFormat: (paid, total) => `Paid: ${paid.toLocaleString()} ₽ · Left: ${(total - paid).toLocaleString()} ₽`,
+      daysFormat: (days) => `${days} ${days === 1 ? 'day' : 'days'}`,
+      
+      // Month names for date formatting
+      months: {
+        '01': 'Jan',
+        '02': 'Feb',
+        '03': 'Mar',
+        '04': 'Apr',
+        '05': 'May',
+        '06': 'Jun',
+        '07': 'Jul',
+        '08': 'Aug',
+        '09': 'Sep',
+        '10': 'Oct',
+        '11': 'Nov',
+        '12': 'Dec'
+      },
+      
+      // Helper function for utility names
+      getUtilityName: (key) => {
+        const names = {
+          education: 'Education',
+          mobile: 'Mobile',
+          electricity: 'Electricity',
+          gas: 'Gas',
+          water: 'Water',
+          internet: 'Internet',
+          fines: 'Fines',
+          taxes: 'Taxes'
+        };
+        return names[key] || key;
+      },
+      
+      // Helper function for bank names
+      getBankName: (key) => {
+        const names = {
+          sber: 'Sberbank',
+          tbank: 'T-Bank',
+          alfa: 'Alfa-Bank',
+          vtb: 'VTB',
+          gazprom: 'Gazprombank',
+          raiffeisen: 'Raiffeisen',
+          otkritie: 'Otkritie',
+          pochta: 'Pochta Bank'
+        };
+        return names[key] || key;
+      }
     },
     
-    // Helper function for bank names
-    getBankName: (key) => {
-      const names = {
-        sber: 'Сбербанк',
-        tbank: 'Т-Банк',
-        alfa: 'Альфа-Банк',
-        vtb: 'ВТБ',
-        gazprom: 'Газпромбанк',
-        raiffeisen: 'Райффайзен',
-        otkritie: 'Открытие',
-        pochta: 'Почта Банк'
-      };
-      return names[key] || key;
+    zh: {
+      // Header
+      welcome: '欢迎回来',
+      userName: '亚历山大',
+      search: '搜索',
+      notifications: '通知',
+      
+      // Cards
+      balance: '余额',
+      cardNumber: '卡号',
+      show: '显示',
+      hide: '隐藏',
+      debit: '借记卡',
+      
+      // Quick Actions
+      quickActions: '快捷操作',
+      qrPayment: '二维码支付',
+      phonePayment: '手机支付',
+      sbp: '快速支付',
+      transfer: '转账',
+      
+      // SBP / Utilities
+      sbpFull: '支付与转账',
+      education: '教育',
+      mobile: '手机',
+      electricity: '电费',
+      gas: '燃气',
+      water: '水费',
+      internet: '网络',
+      fines: '罚款',
+      taxes: '税费',
+      
+      // Banks
+      selectBank: '选择银行',
+      sberbank: '储蓄银行',
+      tbank: 'T银行',
+      alfabank: '阿尔法银行',
+      vtb: 'VTB银行',
+      gazprombank: '天然气工业银行',
+      raiffeisen: '赖夫艾森银行',
+      otkritie: 'Otkritie银行',
+      pochta: '邮政银行',
+      
+      // Analytics
+      analytics: '分析',
+      thisWeek: '本周',
+      thisMonth: '本月',
+      thisYear: '今年',
+      income: '收入',
+      expenses: '支出',
+      
+      // Categories
+      food: '餐饮',
+      groceries: '购物',
+      transport: '交通',
+      entertainment: '娱乐',
+      utilities: '水电',
+      
+      // Fixed Deposits (Gamified)
+      savings: '储蓄',
+      fixedDeposit: '定期存款',
+      investment: '投资',
+      goal: '目标',
+      current: '当前',
+      interest: '利率',
+      streak: '连续天数',
+      nextMilestone: '下一个里程碑',
+      leftToGoal: '距离目标',
+      replenish: '充值',
+      fdName1: '储蓄账户',
+      fdName2: '投资账户',
+      
+      // Debt Reminders
+      debtReminder: '债务提醒',
+      mortgage: '房贷',
+      educationDebt: '教育贷款',
+      paid: '已付',
+      remaining: '剩余',
+      monthlyPayment: '月付',
+      nextPayment: '下次付款',
+      days: '天',
+      pay: '支付',
+      
+      // Recent Transactions
+      recentTransactions: '最近交易',
+      viewAll: '全部',
+      collapse: '收起',
+      
+      // Bottom Navigation
+      home: '主页',
+      payments: '支付',
+      history: '历史',
+      settings: '设置',
+      
+      // QR Scanner
+      scanQR: '扫描二维码',
+      alignQR: '将二维码放入框内',
+      qrDetected: '二维码已检测到！',
+      
+      // Modals - Common
+      cancel: '取消',
+      continue: '继续',
+      confirm: '确认',
+      back: '返回',
+      done: '完成',
+      
+      // Payment Modals
+      enterAmount: '输入金额',
+      enterPhone: '输入手机号码',
+      enterAccount: '输入账号',
+      selectCard: '选择卡片',
+      card: '卡',
+      amount: '金额',
+      recipient: '收款人',
+      processing: '处理支付',
+      success: '支付成功',
+      
+      // Card Selection
+      cardNumberMask: '**** {number}',
+      balanceLabel: '余额',
+      
+      // Filter
+      all: '全部',
+      
+      // Progress text
+      progressFormat: (paid, total) => `已付: ${paid.toLocaleString()} ₽ · 剩余: ${(total - paid).toLocaleString()} ₽`,
+      daysFormat: (days) => `${days}天`,
+      
+      // Month names for date formatting
+      months: {
+        '01': '1月',
+        '02': '2月',
+        '03': '3月',
+        '04': '4月',
+        '05': '5月',
+        '06': '6月',
+        '07': '7月',
+        '08': '8月',
+        '09': '9月',
+        '10': '10月',
+        '11': '11月',
+        '12': '12月'
+      },
+      
+      // Helper function for utility names
+      getUtilityName: (key) => {
+        const names = {
+          education: '教育',
+          mobile: '手机',
+          electricity: '电费',
+          gas: '燃气',
+          water: '水费',
+          internet: '网络',
+          fines: '罚款',
+          taxes: '税费'
+        };
+        return names[key] || key;
+      },
+      
+      // Helper function for bank names
+      getBankName: (key) => {
+        const names = {
+          sber: '储蓄银行',
+          tbank: 'T银行',
+          alfa: '阿尔法银行',
+          vtb: 'VTB银行',
+          gazprom: '天然气工业银行',
+          raiffeisen: '赖夫艾森银行',
+          otkritie: 'Otkritie银行',
+          pochta: '邮政银行'
+        };
+        return names[key] || key;
+      }
+    },
+    
+    hi: {
+      // Header
+      welcome: 'वापसी पर स्वागत है',
+      userName: 'अलेक्जेंडर',
+      search: 'खोजें',
+      notifications: 'सूचनाएं',
+      
+      // Cards
+      balance: 'बैलेंस',
+      cardNumber: 'कार्ड नंबर',
+      show: 'दिखाएं',
+      hide: 'छुपाएं',
+      debit: 'डेबिट',
+      
+      // Quick Actions
+      quickActions: 'त्वरित कार्रवाई',
+      qrPayment: 'क्यूआर भुगतान',
+      phonePayment: 'फोन द्वारा',
+      sbp: 'एसबीपी',
+      transfer: 'ट्रांसफर',
+      
+      // SBP / Utilities
+      sbpFull: 'भुगतान और ट्रांसफर',
+      education: 'शिक्षा',
+      mobile: 'मोबाइल',
+      electricity: 'बिजली',
+      gas: 'गैस',
+      water: 'पानी',
+      internet: 'इंटरनेट',
+      fines: 'जुर्माना',
+      taxes: 'कर',
+      
+      // Banks
+      selectBank: 'बैंक चुनें',
+      sberbank: 'स्बेरबैंक',
+      tbank: 'टी-बैंक',
+      alfabank: 'अल्फा-बैंक',
+      vtb: 'वीटीबी',
+      gazprombank: 'गैज़प्रॉमबैंक',
+      raiffeisen: 'राइफ़ाइज़ेन',
+      otkritie: 'ओटक्रिटी',
+      pochta: 'पोच्टा बैंक',
+      
+      // Analytics
+      analytics: 'एनालिटिक्स',
+      thisWeek: 'इस सप्ताह',
+      thisMonth: 'इस महीने',
+      thisYear: 'इस वर्ष',
+      income: 'आय',
+      expenses: 'खर्च',
+      
+      // Categories
+      food: 'भोजन',
+      groceries: 'किराना',
+      transport: 'परिवहन',
+      entertainment: 'मनोरंजन',
+      utilities: 'उपयोगिताएँ',
+      
+      // Fixed Deposits (Gamified)
+      savings: 'बचत',
+      fixedDeposit: 'फिक्स्ड डिपॉजिट',
+      investment: 'निवेश',
+      goal: 'लक्ष्य',
+      current: 'वर्तमान',
+      interest: 'ब्याज दर',
+      streak: 'लगातार दिन',
+      nextMilestone: 'अगला माइलस्टोन',
+      leftToGoal: 'लक्ष्य से शेष',
+      replenish: 'पुनः भरें',
+      fdName1: 'बचत खाता',
+      fdName2: 'निवेश खाता',
+      
+      // Debt Reminders
+      debtReminder: 'ऋण अनुस्मारक',
+      mortgage: 'गिरवी',
+      educationDebt: 'शिक्षा ऋण',
+      paid: 'भुगतान किया',
+      remaining: 'शेष',
+      monthlyPayment: 'मासिक भुगतान',
+      nextPayment: 'अगला भुगतान',
+      days: 'दिन',
+      pay: 'भुगतान करें',
+      
+      // Recent Transactions
+      recentTransactions: 'हाल के लेन-देन',
+      viewAll: 'सभी देखें',
+      collapse: 'संक्षिप्त करें',
+      
+      // Bottom Navigation
+      home: 'होम',
+      payments: 'भुगतान',
+      history: 'इतिहास',
+      settings: 'सेटिंग्स',
+      
+      // QR Scanner
+      scanQR: 'क्यूआर कोड स्कैन करें',
+      alignQR: 'क्यूआर कोड को फ्रेम में रखें',
+      qrDetected: 'क्यूआर कोड मिला!',
+      
+      // Modals - Common
+      cancel: 'रद्द करें',
+      continue: 'जारी रखें',
+      confirm: 'पुष्टि करें',
+      back: 'वापस',
+      done: 'पूर्ण',
+      
+      // Payment Modals
+      enterAmount: 'राशि दर्ज करें',
+      enterPhone: 'फोन नंबर दर्ज करें',
+      enterAccount: 'खाता नंबर दर्ज करें',
+      selectCard: 'कार्ड चुनें',
+      card: 'कार्ड',
+      amount: 'राशि',
+      recipient: 'प्राप्तकर्ता',
+      processing: 'भुगतान प्रक्रियाधीन',
+      success: 'भुगतान सफल',
+      
+      // Card Selection
+      cardNumberMask: '**** {number}',
+      balanceLabel: 'बैलेंस',
+      
+      // Filter
+      all: 'सभी',
+      
+      // Progress text
+      progressFormat: (paid, total) => `भुगतान: ${paid.toLocaleString()} ₽ · शेष: ${(total - paid).toLocaleString()} ₽`,
+      daysFormat: (days) => `${days} दिन`,
+      
+      // Month names for date formatting
+      months: {
+        '01': 'जन',
+        '02': 'फर',
+        '03': 'मार',
+        '04': 'अप्र',
+        '05': 'मई',
+        '06': 'जून',
+        '07': 'जुल',
+        '08': 'अग',
+        '09': 'सित',
+        '10': 'अक्ट',
+        '11': 'नव',
+        '12': 'दिस'
+      },
+      
+      // Helper function for utility names
+      getUtilityName: (key) => {
+        const names = {
+          education: 'शिक्षा',
+          mobile: 'मोबाइल',
+          electricity: 'बिजली',
+          gas: 'गैस',
+          water: 'पानी',
+          internet: 'इंटरनेट',
+          fines: 'जुर्माना',
+          taxes: 'कर'
+        };
+        return names[key] || key;
+      },
+      
+      // Helper function for bank names
+      getBankName: (key) => {
+        const names = {
+          sber: 'स्बेरबैंक',
+          tbank: 'टी-बैंक',
+          alfa: 'अल्फा-बैंक',
+          vtb: 'वीटीबी',
+          gazprom: 'गैज़प्रॉमबैंक',
+          raiffeisen: 'राइफ़ाइज़ेन',
+          otkritie: 'ओटक्रिटी',
+          pochta: 'पोच्टा बैंक'
+        };
+        return names[key] || key;
+      }
+    },
+    
+    ar: {
+      // Header
+      welcome: 'مرحباً بعودتك',
+      userName: 'ألكسندر',
+      search: 'بحث',
+      notifications: 'إشعارات',
+      
+      // Cards
+      balance: 'الرصيد',
+      cardNumber: 'رقم البطاقة',
+      show: 'إظهار',
+      hide: 'إخفاء',
+      debit: 'بطاقة خصم',
+      
+      // Quick Actions
+      quickActions: 'إجراءات سريعة',
+      qrPayment: 'الدفع عبر QR',
+      phonePayment: 'بالهاتف',
+      sbp: 'SBP',
+      transfer: 'تحويل',
+      
+      // SBP / Utilities
+      sbpFull: 'المدفوعات والتحويلات',
+      education: 'تعليم',
+      mobile: 'جوال',
+      electricity: 'كهرباء',
+      gas: 'غاز',
+      water: 'مياه',
+      internet: 'إنترنت',
+      fines: 'غرامات',
+      taxes: 'ضرائب',
+      
+      // Banks
+      selectBank: 'اختر البنك',
+      sberbank: 'سبيربنك',
+      tbank: 'تي-بنك',
+      alfabank: 'ألفا-بنك',
+      vtb: 'في تي بي',
+      gazprombank: 'غازبروم بنك',
+      raiffeisen: 'رايفايزن',
+      otkritie: 'أوتكريتي',
+      pochta: 'بنك البريد',
+      
+      // Analytics
+      analytics: 'التحليلات',
+      thisWeek: 'هذا الأسبوع',
+      thisMonth: 'هذا الشهر',
+      thisYear: 'هذه السنة',
+      income: 'دخل',
+      expenses: 'مصروفات',
+      
+      // Categories
+      food: 'طعام',
+      groceries: 'بقالة',
+      transport: 'مواصلات',
+      entertainment: 'ترفيه',
+      utilities: 'مرافق',
+      
+      // Fixed Deposits (Gamified)
+      savings: 'مدخرات',
+      fixedDeposit: 'وديعة ثابتة',
+      investment: 'استثمارات',
+      goal: 'هدف',
+      current: 'حالي',
+      interest: 'فائدة',
+      streak: 'أيام متتالية',
+      nextMilestone: 'الهدف التالي',
+      leftToGoal: 'متبقي للهدف',
+      replenish: 'إعادة تعبئة',
+      fdName1: 'حساب توفير',
+      fdName2: 'حساب استثماري',
+      
+      // Debt Reminders
+      debtReminder: 'تذكير الديون',
+      mortgage: 'رهن عقاري',
+      educationDebt: 'قرض تعليمي',
+      paid: 'مدفوع',
+      remaining: 'متبقي',
+      monthlyPayment: 'الدفعة الشهرية',
+      nextPayment: 'الدفعة القادمة',
+      days: 'أيام',
+      pay: 'ادفع',
+      
+      // Recent Transactions
+      recentTransactions: 'آخر المعاملات',
+      viewAll: 'عرض الكل',
+      collapse: 'طي',
+      
+      // Bottom Navigation
+      home: 'الرئيسية',
+      payments: 'المدفوعات',
+      history: 'السجل',
+      settings: 'الإعدادات',
+      
+      // QR Scanner
+      scanQR: 'امسح رمز QR',
+      alignQR: 'ضع رمز QR في الإطار',
+      qrDetected: 'تم اكتشاف رمز QR!',
+      
+      // Modals - Common
+      cancel: 'إلغاء',
+      continue: 'متابعة',
+      confirm: 'تأكيد',
+      back: 'رجوع',
+      done: 'تم',
+      
+      // Payment Modals
+      enterAmount: 'أدخل المبلغ',
+      enterPhone: 'أدخل رقم الهاتف',
+      enterAccount: 'أدخل رقم الحساب',
+      selectCard: 'اختر البطاقة',
+      card: 'بطاقة',
+      amount: 'المبلغ',
+      recipient: 'المستلم',
+      processing: 'جاري المعالجة',
+      success: 'تم الدفع بنجاح',
+      
+      // Card Selection
+      cardNumberMask: '**** {number}',
+      balanceLabel: 'الرصيد',
+      
+      // Filter
+      all: 'الكل',
+      
+      // Progress text
+      progressFormat: (paid, total) => `مدفوع: ${paid.toLocaleString()} ₽ · متبقي: ${(total - paid).toLocaleString()} ₽`,
+      daysFormat: (days) => `${days} ${days === 1 ? 'يوم' : 'أيام'}`,
+      
+      // Month names for date formatting (Arabic)
+      months: {
+        '01': 'يناير',
+        '02': 'فبراير',
+        '03': 'مارس',
+        '04': 'أبريل',
+        '05': 'مايو',
+        '06': 'يونيو',
+        '07': 'يوليو',
+        '08': 'أغسطس',
+        '09': 'سبتمبر',
+        '10': 'أكتوبر',
+        '11': 'نوفمبر',
+        '12': 'ديسمبر'
+      },
+      
+      // Helper function for utility names
+      getUtilityName: (key) => {
+        const names = {
+          education: 'تعليم',
+          mobile: 'جوال',
+          electricity: 'كهرباء',
+          gas: 'غاز',
+          water: 'مياه',
+          internet: 'إنترنت',
+          fines: 'غرامات',
+          taxes: 'ضرائب'
+        };
+        return names[key] || key;
+      },
+      
+      // Helper function for bank names
+      getBankName: (key) => {
+        const names = {
+          sber: 'سبيربنك',
+          tbank: 'تي-بنك',
+          alfa: 'ألفا-بنك',
+          vtb: 'في تي بي',
+          gazprom: 'غازبروم بنك',
+          raiffeisen: 'رايفايزن',
+          otkritie: 'أوتكريتي',
+          pochta: 'بنك البريد'
+        };
+        return names[key] || key;
+      }
+    },
+    
+    kk: {
+      // Header
+      welcome: 'Қайта оралуыңызбен',
+      userName: 'Александр',
+      search: 'Іздеу',
+      notifications: 'Хабарландырулар',
+      
+      // Cards
+      balance: 'Баланс',
+      cardNumber: 'Карта нөмірі',
+      show: 'Көрсету',
+      hide: 'Жасыру',
+      debit: 'Дебеттік',
+      
+      // Quick Actions
+      quickActions: 'Жылдам әрекеттер',
+      qrPayment: 'QR төлем',
+      phonePayment: 'Телефон арқылы',
+      sbp: 'СБП',
+      transfer: 'Аударым',
+      
+      // SBP / Utilities
+      sbpFull: 'Төлемдер және аударымдар',
+      education: 'Білім',
+      mobile: 'Мобильді',
+      electricity: 'Электр',
+      gas: 'Газ',
+      water: 'Су',
+      internet: 'Интернет',
+      fines: 'Айыппұлдар',
+      taxes: 'Салықтар',
+      
+      // Banks
+      selectBank: 'Банкті таңдаңыз',
+      sberbank: 'Сбербанк',
+      tbank: 'Т-Банк',
+      alfabank: 'Альфа-Банк',
+      vtb: 'ВТБ',
+      gazprombank: 'Газпромбанк',
+      raiffeisen: 'Райффайзен',
+      otkritie: 'Открытие',
+      pochta: 'Почта Банк',
+      
+      // Analytics
+      analytics: 'Аналитика',
+      thisWeek: 'Осы апта',
+      thisMonth: 'Осы ай',
+      thisYear: 'Осы жыл',
+      income: 'Кіріс',
+      expenses: 'Шығыс',
+      
+      // Categories
+      food: 'Тамақ',
+      groceries: 'Азық-түлік',
+      transport: 'Көлік',
+      entertainment: 'Ойын-сауық',
+      utilities: 'Коммуналдық',
+      
+      // Fixed Deposits (Gamified)
+      savings: 'Жинақ',
+      fixedDeposit: 'Мерзімді салым',
+      investment: 'Инвестиция',
+      goal: 'Мақсат',
+      current: 'Ағымдағы',
+      interest: 'Мөлшерлеме',
+      streak: 'Қатар күндер',
+      nextMilestone: 'Келесі мақсат',
+      leftToGoal: 'Мақсатқа дейін',
+      replenish: 'Толықтыру',
+      fdName1: 'Жинақ шоты',
+      fdName2: 'Инвестициялық шот',
+      
+      // Debt Reminders
+      debtReminder: 'Қарыз ескертуі',
+      mortgage: 'Ипотека',
+      educationDebt: 'Білім қарызы',
+      paid: 'Төленді',
+      remaining: 'Қалдық',
+      monthlyPayment: 'Айлық төлем',
+      nextPayment: 'Келесі төлем',
+      days: 'күн',
+      pay: 'Төлеу',
+      
+      // Recent Transactions
+      recentTransactions: 'Соңғы транзакциялар',
+      viewAll: 'Барлығын көру',
+      collapse: 'Жию',
+      
+      // Bottom Navigation
+      home: 'Басты',
+      payments: 'Төлемдер',
+      history: 'Тарих',
+      settings: 'Баптаулар',
+      
+      // QR Scanner
+      scanQR: 'QR кодты сканерлеу',
+      alignQR: 'QR кодты рамкаға салыңыз',
+      qrDetected: 'QR код табылды!',
+      
+      // Modals - Common
+      cancel: 'Болдырмау',
+      continue: 'Жалғастыру',
+      confirm: 'Растау',
+      back: 'Артқа',
+      done: 'Дайын',
+      
+      // Payment Modals
+      enterAmount: 'Соманы енгізіңіз',
+      enterPhone: 'Телефон нөмірін енгізіңіз',
+      enterAccount: 'Шот нөмірін енгізіңіз',
+      selectCard: 'Картаны таңдаңыз',
+      card: 'Карта',
+      amount: 'Сома',
+      recipient: 'Алушы',
+      processing: 'Төлем өңделуде',
+      success: 'Төлем сәтті',
+      
+      // Card Selection
+      cardNumberMask: '**** {number}',
+      balanceLabel: 'Баланс',
+      
+      // Filter
+      all: 'Барлығы',
+      
+      // Progress text
+      progressFormat: (paid, total) => `Төленді: ${paid.toLocaleString()} ₽ · Қалды: ${(total - paid).toLocaleString()} ₽`,
+      daysFormat: (days) => `${days} күн`,
+      
+      // Month names for date formatting
+      months: {
+        '01': 'қаң',
+        '02': 'ақп',
+        '03': 'нау',
+        '04': 'сәу',
+        '05': 'мам',
+        '06': 'мау',
+        '07': 'шіл',
+        '08': 'там',
+        '09': 'қыр',
+        '10': 'қаз',
+        '11': 'қар',
+        '12': 'жел'
+      },
+      
+      // Helper function for utility names
+      getUtilityName: (key) => {
+        const names = {
+          education: 'Білім',
+          mobile: 'Мобильді',
+          electricity: 'Электр',
+          gas: 'Газ',
+          water: 'Су',
+          internet: 'Интернет',
+          fines: 'Айыппұлдар',
+          taxes: 'Салықтар'
+        };
+        return names[key] || key;
+      },
+      
+      // Helper function for bank names
+      getBankName: (key) => {
+        const names = {
+          sber: 'Сбербанк',
+          tbank: 'Т-Банк',
+          alfa: 'Альфа-Банк',
+          vtb: 'ВТБ',
+          gazprom: 'Газпромбанк',
+          raiffeisen: 'Райффайзен',
+          otkritie: 'Открытие',
+          pochta: 'Почта Банк'
+        };
+        return names[key] || key;
+      }
+    },
+    
+    tg: {
+      // Header
+      welcome: 'Хуш омадед',
+      userName: 'Александр',
+      search: 'Ҷустуҷӯ',
+      notifications: 'Огоҳиҳо',
+      
+      // Cards
+      balance: 'Бақия',
+      cardNumber: 'Рақами корт',
+      show: 'Нишон додан',
+      hide: 'Пинҳон кардан',
+      debit: 'Дебетӣ',
+      
+      // Quick Actions
+      quickActions: 'Амалҳои зуд',
+      qrPayment: 'Пардохти QR',
+      phonePayment: 'Бо телефон',
+      sbp: 'СБП',
+      transfer: 'Интиқол',
+      
+      // SBP / Utilities
+      sbpFull: 'Пардохтҳо ва интиқолҳо',
+      education: 'Маориф',
+      mobile: 'Мобилӣ',
+      electricity: 'Барқ',
+      gas: 'Газ',
+      water: 'Об',
+      internet: 'Интернет',
+      fines: 'Ҷаримаҳо',
+      taxes: 'Андозҳо',
+      
+      // Banks
+      selectBank: 'Бонкро интихоб кунед',
+      sberbank: 'Сбербанк',
+      tbank: 'Т-Банк',
+      alfabank: 'Альфа-Банк',
+      vtb: 'ВТБ',
+      gazprombank: 'Газпромбанк',
+      raiffeisen: 'Райффайзен',
+      otkritie: 'Открытие',
+      pochta: 'Почта Банк',
+      
+      // Analytics
+      analytics: 'Таҳлил',
+      thisWeek: 'Ин ҳафта',
+      thisMonth: 'Ин моҳ',
+      thisYear: 'Имсол',
+      income: 'Даромад',
+      expenses: 'Хароҷот',
+      
+      // Categories
+      food: 'Ғизо',
+      groceries: 'Хӯрокворӣ',
+      transport: 'Нақлиёт',
+      entertainment: 'Фароғат',
+      utilities: 'Коммуналӣ',
+      
+      // Fixed Deposits (Gamified)
+      savings: 'Пасандоз',
+      fixedDeposit: 'Пасандози мӯҳлатдор',
+      investment: 'Сармоягузорӣ',
+      goal: 'Ҳадаф',
+      current: 'Ҷорӣ',
+      interest: 'Фоиз',
+      streak: 'Рӯзҳои пайдарпай',
+      nextMilestone: 'Ҳадафи навбатӣ',
+      leftToGoal: 'То ҳадаф',
+      replenish: 'Пур кардан',
+      fdName1: 'Ҳисоби пасандоз',
+      fdName2: 'Ҳисоби сармоягузорӣ',
+      
+      // Debt Reminders
+      debtReminder: 'Ёдраскунии қарз',
+      mortgage: 'Ипотека',
+      educationDebt: 'Қарзи маориф',
+      paid: 'Пардохт шуд',
+      remaining: 'Боқимонда',
+      monthlyPayment: 'Пардохти моҳона',
+      nextPayment: 'Пардохти навбатӣ',
+      days: 'рӯз',
+      pay: 'Пардохт',
+      
+      // Recent Transactions
+      recentTransactions: 'Амалиёти охирин',
+      viewAll: 'Ҳама',
+      collapse: 'Печондан',
+      
+      // Bottom Navigation
+      home: 'Асосӣ',
+      payments: 'Пардохтҳо',
+      history: 'Таърих',
+      settings: 'Танзимот',
+      
+      // QR Scanner
+      scanQR: 'Рамзи QR-ро скан кунед',
+      alignQR: 'Рамзи QR-ро ба чаҳорчӯба гузоред',
+      qrDetected: 'Рамзи QR ёфт шуд!',
+      
+      // Modals - Common
+      cancel: 'Бекор кардан',
+      continue: 'Давом додан',
+      confirm: 'Тасдиқ',
+      back: 'Бозгашт',
+      done: 'Тайёр',
+      
+      // Payment Modals
+      enterAmount: 'Маблағро ворид кунед',
+      enterPhone: 'Рақами телефонро ворид кунед',
+      enterAccount: 'Рақами ҳисобро ворид кунед',
+      selectCard: 'Кортро интихоб кунед',
+      card: 'Корт',
+      amount: 'Маблағ',
+      recipient: 'Қабулкунанда',
+      processing: 'Коркарди пардохт',
+      success: 'Пардохт муваффақ',
+      
+      // Card Selection
+      cardNumberMask: '**** {number}',
+      balanceLabel: 'Бақия',
+      
+      // Filter
+      all: 'Ҳама',
+      
+      // Progress text
+      progressFormat: (paid, total) => `Пардохт: ${paid.toLocaleString()} ₽ · Боқӣ: ${(total - paid).toLocaleString()} ₽`,
+      daysFormat: (days) => `${days} рӯз`,
+      
+      // Month names for date formatting
+      months: {
+        '01': 'янв',
+        '02': 'фев',
+        '03': 'мар',
+        '04': 'апр',
+        '05': 'май',
+        '06': 'июн',
+        '07': 'июл',
+        '08': 'авг',
+        '09': 'сен',
+        '10': 'окт',
+        '11': 'ноя',
+        '12': 'дек'
+      },
+      
+      // Helper function for utility names
+      getUtilityName: (key) => {
+        const names = {
+          education: 'Маориф',
+          mobile: 'Мобилӣ',
+          electricity: 'Барқ',
+          gas: 'Газ',
+          water: 'Об',
+          internet: 'Интернет',
+          fines: 'Ҷаримаҳо',
+          taxes: 'Андозҳо'
+        };
+        return names[key] || key;
+      },
+      
+      // Helper function for bank names
+      getBankName: (key) => {
+        const names = {
+          sber: 'Сбербанк',
+          tbank: 'Т-Банк',
+          alfa: 'Альфа-Банк',
+          vtb: 'ВТБ',
+          gazprom: 'Газпромбанк',
+          raiffeisen: 'Райффайзен',
+          otkritie: 'Открытие',
+          pochta: 'Почта Банк'
+        };
+        return names[key] || key;
+      }
+    },
+    
+    uz: {
+      // Header
+      welcome: 'Qaytganingiz bilan',
+      userName: 'Aleksandr',
+      search: 'Qidirish',
+      notifications: 'Bildirishnomalar',
+      
+      // Cards
+      balance: 'Balans',
+      cardNumber: 'Karta raqami',
+      show: 'Koʻrsatish',
+      hide: 'Yashirish',
+      debit: 'Debet',
+      
+      // Quick Actions
+      quickActions: 'Tezkor amallar',
+      qrPayment: 'QR toʻlov',
+      phonePayment: 'Telefon orqali',
+      sbp: 'SBP',
+      transfer: 'Pul oʻtkazish',
+      
+      // SBP / Utilities
+      sbpFull: 'Toʻlovlar va oʻtkazmalar',
+      education: 'Taʼlim',
+      mobile: 'Mobil',
+      electricity: 'Elektr',
+      gas: 'Gaz',
+      water: 'Suv',
+      internet: 'Internet',
+      fines: 'Jarimalar',
+      taxes: 'Soliqlar',
+      
+      // Banks
+      selectBank: 'Bankni tanlang',
+      sberbank: 'Sberbank',
+      tbank: 'T-Bank',
+      alfabank: 'Alfa-Bank',
+      vtb: 'VTB',
+      gazprombank: 'Gazprombank',
+      raiffeisen: 'Raiffeisen',
+      otkritie: 'Otkritie',
+      pochta: 'Pochta Bank',
+      
+      // Analytics
+      analytics: 'Tahlillar',
+      thisWeek: 'Shu hafta',
+      thisMonth: 'Shu oy',
+      thisYear: 'Bu yil',
+      income: 'Daromad',
+      expenses: 'Xarajatlar',
+      
+      // Categories
+      food: 'Ovqatlanish',
+      groceries: 'Oziq-ovqat',
+      transport: 'Transport',
+      entertainment: 'Koʻngilochar',
+      utilities: 'Kommunal',
+      
+      // Fixed Deposits (Gamified)
+      savings: 'Jamgʻarma',
+      fixedDeposit: 'Muddatli omonat',
+      investment: 'Investitsiya',
+      goal: 'Maqsad',
+      current: 'Joriy',
+      interest: 'Foiz',
+      streak: 'Ketma-ket kunlar',
+      nextMilestone: 'Keyingi maqsad',
+      leftToGoal: 'Maqsadgacha',
+      replenish: 'Toʻldirish',
+      fdName1: 'Jamgʻarma hisobi',
+      fdName2: 'Investitsiya hisobi',
+      
+      // Debt Reminders
+      debtReminder: 'Qarz eslatmasi',
+      mortgage: 'Ipoteka',
+      educationDebt: 'Taʼlim qarzi',
+      paid: 'Toʻlandi',
+      remaining: 'Qoldiq',
+      monthlyPayment: 'Oylik toʻlov',
+      nextPayment: 'Keyingi toʻlov',
+      days: 'kun',
+      pay: 'Toʻlash',
+      
+      // Recent Transactions
+      recentTransactions: 'Soʻnggi tranzaksiyalar',
+      viewAll: 'Barchasini koʻrish',
+      collapse: 'Yigʻish',
+      
+      // Bottom Navigation
+      home: 'Bosh sahifa',
+      payments: 'Toʻlovlar',
+      history: 'Tarix',
+      settings: 'Sozlamalar',
+      
+      // QR Scanner
+      scanQR: 'QR kodni skanerlash',
+      alignQR: 'QR kodni ramkaga joylashtiring',
+      qrDetected: 'QR kod topildi!',
+      
+      // Modals - Common
+      cancel: 'Bekor qilish',
+      continue: 'Davom etish',
+      confirm: 'Tasdiqlash',
+      back: 'Orqaga',
+      done: 'Tayyor',
+      
+      // Payment Modals
+      enterAmount: 'Miqdorni kiriting',
+      enterPhone: 'Telefon raqamini kiriting',
+      enterAccount: 'Hisob raqamini kiriting',
+      selectCard: 'Kartani tanlang',
+      card: 'Karta',
+      amount: 'Miqdor',
+      recipient: 'Qabul qiluvchi',
+      processing: "Toʻlov amalga oshirilmoqda",
+      success: "Toʻlov muvaffaqiyatli",
+      
+      // Card Selection
+      cardNumberMask: '**** {number}',
+      balanceLabel: 'Balans',
+      
+      // Filter
+      all: 'Barchasi',
+      
+      // Progress text
+      progressFormat: (paid, total) => `Toʻlandi: ${paid.toLocaleString()} ₽ · Qoldi: ${(total - paid).toLocaleString()} ₽`,
+      daysFormat: (days) => `${days} kun`,
+      
+      // Month names for date formatting
+      months: {
+        '01': 'yan',
+        '02': 'fev',
+        '03': 'mar',
+        '04': 'apr',
+        '05': 'may',
+        '06': 'iyn',
+        '07': 'iyl',
+        '08': 'avg',
+        '09': 'sen',
+        '10': 'okt',
+        '11': 'noy',
+        '12': 'dek'
+      },
+      
+      // Helper function for utility names
+      getUtilityName: (key) => {
+        const names = {
+          education: 'Taʼlim',
+          mobile: 'Mobil',
+          electricity: 'Elektr',
+          gas: 'Gaz',
+          water: 'Suv',
+          internet: 'Internet',
+          fines: 'Jarimalar',
+          taxes: 'Soliqlar'
+        };
+        return names[key] || key;
+      },
+      
+      // Helper function for bank names
+      getBankName: (key) => {
+        const names = {
+          sber: 'Sberbank',
+          tbank: 'T-Bank',
+          alfa: 'Alfa-Bank',
+          vtb: 'VTB',
+          gazprom: 'Gazprombank',
+          raiffeisen: 'Raiffeisen',
+          otkritie: 'Otkritie',
+          pochta: 'Pochta Bank'
+        };
+        return names[key] || key;
+      }
     }
-  },
-  
-  en: {
-    // Header
-    welcome: 'Welcome back',
-    userName: 'Alexander',
-    search: 'Search',
-    notifications: 'Notifications',
-    
-    // Cards
-    balance: 'Balance',
-    cardNumber: 'Card Number',
-    show: 'Show',
-    hide: 'Hide',
-    debit: 'Debit',
-    
-    // Quick Actions
-    quickActions: 'Quick Actions',
-    qrPayment: 'QR Payment',
-    phonePayment: 'By Phone',
-    sbp: 'SBP',
-    transfer: 'Transfer',
-    
-    // SBP / Utilities
-    sbpFull: 'Payments & Transfers',
-    education: 'Education',
-    mobile: 'Mobile',
-    electricity: 'Electricity',
-    gas: 'Gas',
-    water: 'Water',
-    internet: 'Internet',
-    fines: 'Fines',
-    taxes: 'Taxes',
-    
-    // Banks
-    selectBank: 'Select Bank',
-    sberbank: 'Sberbank',
-    tbank: 'T-Bank',
-    alfabank: 'Alfa-Bank',
-    vtb: 'VTB',
-    gazprombank: 'Gazprombank',
-    raiffeisen: 'Raiffeisen',
-    otkritie: 'Otkritie',
-    pochta: 'Pochta Bank',
-    
-    // Analytics
-    analytics: 'Analytics',
-    thisWeek: 'This Week',
-    thisMonth: 'This Month',
-    thisYear: 'This Year',
-    income: 'Income',
-    expenses: 'Expenses',
-    
-    // Categories
-    food: 'Food',
-    groceries: 'Groceries',
-    transport: 'Transport',
-    entertainment: 'Entertainment',
-    utilities: 'Utilities',
-    
-    // Fixed Deposits (Gamified)
-    savings: 'Savings',
-    fixedDeposit: 'Fixed Deposit',
-    investment: 'Investment',
-    goal: 'Goal',
-    current: 'Current',
-    interest: 'Interest',
-    streak: 'Day streak',
-    nextMilestone: 'Next Milestone',
-    leftToGoal: 'Left to Goal',
-    replenish: 'Replenish',
-    fdName1: 'Savings',
-    fdName2: 'Investment',
-    
-    // Debt Reminders
-    debtReminder: 'Debt Reminder',
-    mortgage: 'Mortgage',
-    educationDebt: 'Education',
-    paid: 'Paid',
-    remaining: 'Remaining',
-    monthlyPayment: 'Monthly Payment',
-    nextPayment: 'Next Payment',
-    days: 'days',
-    pay: 'Pay',
-    
-    // Recent Transactions
-    recentTransactions: 'Recent Transactions',
-    viewAll: 'View All',
-    collapse: 'Collapse',
-    
-    // Bottom Navigation
-    home: 'Home',
-    payments: 'Payments',
-    history: 'History',
-    settings: 'Settings',
-    
-    // QR Scanner
-    scanQR: 'Scan QR Code',
-    alignQR: 'Align QR code within frame',
-    qrDetected: 'QR Code detected!',
-    
-    // Modals - Common
-    cancel: 'Cancel',
-    continue: 'Continue',
-    confirm: 'Confirm',
-    back: 'Back',
-    done: 'Done',
-    
-    // Payment Modals
-    enterAmount: 'Enter amount',
-    enterPhone: 'Enter phone number',
-    enterAccount: 'Enter account number',
-    selectCard: 'Select card',
-    card: 'Card',
-    amount: 'Amount',
-    recipient: 'Recipient',
-    processing: 'Processing payment',
-    success: 'Payment successful',
-    
-    // Card Selection
-    cardNumberMask: '**** {number}',
-    balanceLabel: 'Balance',
-    
-    // Filter
-    all: 'All',
-    
-    // Progress text
-    progressFormat: (paid, total) => `Paid: ${paid.toLocaleString()} ₽ · Left: ${(total - paid).toLocaleString()} ₽`,
-    daysFormat: (days) => `${days} ${days === 1 ? 'day' : 'days'}`,
-    
-    // Month names for date formatting
-    months: {
-      '01': 'Jan',
-      '02': 'Feb',
-      '03': 'Mar',
-      '04': 'Apr',
-      '05': 'May',
-      '06': 'Jun',
-      '07': 'Jul',
-      '08': 'Aug',
-      '09': 'Sep',
-      '10': 'Oct',
-      '11': 'Nov',
-      '12': 'Dec'
-    },
-    
-    // Helper function for utility names
-    getUtilityName: (key) => {
-      const names = {
-        education: 'Education',
-        mobile: 'Mobile',
-        electricity: 'Electricity',
-        gas: 'Gas',
-        water: 'Water',
-        internet: 'Internet',
-        fines: 'Fines',
-        taxes: 'Taxes'
-      };
-      return names[key] || key;
-    },
-    
-    // Helper function for bank names
-    getBankName: (key) => {
-      const names = {
-        sber: 'Sberbank',
-        tbank: 'T-Bank',
-        alfa: 'Alfa-Bank',
-        vtb: 'VTB',
-        gazprom: 'Gazprombank',
-        raiffeisen: 'Raiffeisen',
-        otkritie: 'Otkritie',
-        pochta: 'Pochta Bank'
-      };
-      return names[key] || key;
-    }
-  },
-  
-  zh: {
-    // Header
-    welcome: '欢迎回来',
-    userName: '亚历山大',
-    search: '搜索',
-    notifications: '通知',
-    
-    // Cards
-    balance: '余额',
-    cardNumber: '卡号',
-    show: '显示',
-    hide: '隐藏',
-    debit: '借记卡',
-    
-    // Quick Actions
-    quickActions: '快捷操作',
-    qrPayment: '二维码支付',
-    phonePayment: '手机支付',
-    sbp: '快速支付',
-    transfer: '转账',
-    
-    // SBP / Utilities
-    sbpFull: '支付与转账',
-    education: '教育',
-    mobile: '手机',
-    electricity: '电费',
-    gas: '燃气',
-    water: '水费',
-    internet: '网络',
-    fines: '罚款',
-    taxes: '税费',
-    
-    // Banks
-    selectBank: '选择银行',
-    sberbank: '储蓄银行',
-    tbank: 'T银行',
-    alfabank: '阿尔法银行',
-    vtb: 'VTB银行',
-    gazprombank: '天然气工业银行',
-    raiffeisen: '赖夫艾森银行',
-    otkritie: 'Otkritie银行',
-    pochta: '邮政银行',
-    
-    // Analytics
-    analytics: '分析',
-    thisWeek: '本周',
-    thisMonth: '本月',
-    thisYear: '今年',
-    income: '收入',
-    expenses: '支出',
-    
-    // Categories
-    food: '餐饮',
-    groceries: '购物',
-    transport: '交通',
-    entertainment: '娱乐',
-    utilities: '水电',
-    
-    // Fixed Deposits (Gamified)
-    savings: '储蓄',
-    fixedDeposit: '定期存款',
-    investment: '投资',
-    goal: '目标',
-    current: '当前',
-    interest: '利率',
-    streak: '连续天数',
-    nextMilestone: '下一个里程碑',
-    leftToGoal: '距离目标',
-    replenish: '充值',
-    fdName1: '储蓄账户',
-    fdName2: '投资账户',
-    
-    // Debt Reminders
-    debtReminder: '债务提醒',
-    mortgage: '房贷',
-    educationDebt: '教育贷款',
-    paid: '已付',
-    remaining: '剩余',
-    monthlyPayment: '月付',
-    nextPayment: '下次付款',
-    days: '天',
-    pay: '支付',
-    
-    // Recent Transactions
-    recentTransactions: '最近交易',
-    viewAll: '全部',
-    collapse: '收起',
-    
-    // Bottom Navigation
-    home: '主页',
-    payments: '支付',
-    history: '历史',
-    settings: '设置',
-    
-    // QR Scanner
-    scanQR: '扫描二维码',
-    alignQR: '将二维码放入框内',
-    qrDetected: '二维码已检测到！',
-    
-    // Modals - Common
-    cancel: '取消',
-    continue: '继续',
-    confirm: '确认',
-    back: '返回',
-    done: '完成',
-    
-    // Payment Modals
-    enterAmount: '输入金额',
-    enterPhone: '输入手机号码',
-    enterAccount: '输入账号',
-    selectCard: '选择卡片',
-    card: '卡',
-    amount: '金额',
-    recipient: '收款人',
-    processing: '处理支付',
-    success: '支付成功',
-    
-    // Card Selection
-    cardNumberMask: '**** {number}',
-    balanceLabel: '余额',
-    
-    // Filter
-    all: '全部',
-    
-    // Progress text
-    progressFormat: (paid, total) => `已付: ${paid.toLocaleString()} ₽ · 剩余: ${(total - paid).toLocaleString()} ₽`,
-    daysFormat: (days) => `${days}天`,
-    
-    // Month names for date formatting
-    months: {
-      '01': '1月',
-      '02': '2月',
-      '03': '3月',
-      '04': '4月',
-      '05': '5月',
-      '06': '6月',
-      '07': '7月',
-      '08': '8月',
-      '09': '9月',
-      '10': '10月',
-      '11': '11月',
-      '12': '12月'
-    },
-    
-    // Helper function for utility names
-    getUtilityName: (key) => {
-      const names = {
-        education: '教育',
-        mobile: '手机',
-        electricity: '电费',
-        gas: '燃气',
-        water: '水费',
-        internet: '网络',
-        fines: '罚款',
-        taxes: '税费'
-      };
-      return names[key] || key;
-    },
-    
-    // Helper function for bank names
-    getBankName: (key) => {
-      const names = {
-        sber: '储蓄银行',
-        tbank: 'T银行',
-        alfa: '阿尔法银行',
-        vtb: 'VTB银行',
-        gazprom: '天然气工业银行',
-        raiffeisen: '赖夫艾森银行',
-        otkritie: 'Otkritie银行',
-        pochta: '邮政银行'
-      };
-      return names[key] || key;
-    }
-  },
-  
-  hi: {
-    // Header
-    welcome: 'वापसी पर स्वागत है',
-    userName: 'अलेक्जेंडर',
-    search: 'खोजें',
-    notifications: 'सूचनाएं',
-    
-    // Cards
-    balance: 'बैलेंस',
-    cardNumber: 'कार्ड नंबर',
-    show: 'दिखाएं',
-    hide: 'छुपाएं',
-    debit: 'डेबिट',
-    
-    // Quick Actions
-    quickActions: 'त्वरित कार्रवाई',
-    qrPayment: 'क्यूआर भुगतान',
-    phonePayment: 'फोन द्वारा',
-    sbp: 'एसबीपी',
-    transfer: 'ट्रांसफर',
-    
-    // SBP / Utilities
-    sbpFull: 'भुगतान और ट्रांसफर',
-    education: 'शिक्षा',
-    mobile: 'मोबाइल',
-    electricity: 'बिजली',
-    gas: 'गैस',
-    water: 'पानी',
-    internet: 'इंटरनेट',
-    fines: 'जुर्माना',
-    taxes: 'कर',
-    
-    // Banks
-    selectBank: 'बैंक चुनें',
-    sberbank: 'स्बेरबैंक',
-    tbank: 'टी-बैंक',
-    alfabank: 'अल्फा-बैंक',
-    vtb: 'वीटीबी',
-    gazprombank: 'गैज़प्रॉमबैंक',
-    raiffeisen: 'राइफ़ाइज़ेन',
-    otkritie: 'ओटक्रिटी',
-    pochta: 'पोच्टा बैंक',
-    
-    // Analytics
-    analytics: 'एनालिटिक्स',
-    thisWeek: 'इस सप्ताह',
-    thisMonth: 'इस महीने',
-    thisYear: 'इस वर्ष',
-    income: 'आय',
-    expenses: 'खर्च',
-    
-    // Categories
-    food: 'भोजन',
-    groceries: 'किराना',
-    transport: 'परिवहन',
-    entertainment: 'मनोरंजन',
-    utilities: 'उपयोगिताएँ',
-    
-    // Fixed Deposits (Gamified)
-    savings: 'बचत',
-    fixedDeposit: 'फिक्स्ड डिपॉजिट',
-    investment: 'निवेश',
-    goal: 'लक्ष्य',
-    current: 'वर्तमान',
-    interest: 'ब्याज दर',
-    streak: 'लगातार दिन',
-    nextMilestone: 'अगला माइलस्टोन',
-    leftToGoal: 'लक्ष्य से शेष',
-    replenish: 'पुनः भरें',
-    fdName1: 'बचत खाता',
-    fdName2: 'निवेश खाता',
-    
-    // Debt Reminders
-    debtReminder: 'ऋण अनुस्मारक',
-    mortgage: 'गिरवी',
-    educationDebt: 'शिक्षा ऋण',
-    paid: 'भुगतान किया',
-    remaining: 'शेष',
-    monthlyPayment: 'मासिक भुगतान',
-    nextPayment: 'अगला भुगतान',
-    days: 'दिन',
-    pay: 'भुगतान करें',
-    
-    // Recent Transactions
-    recentTransactions: 'हाल के लेन-देन',
-    viewAll: 'सभी देखें',
-    collapse: 'संक्षिप्त करें',
-    
-    // Bottom Navigation
-    home: 'होम',
-    payments: 'भुगतान',
-    history: 'इतिहास',
-    settings: 'सेटिंग्स',
-    
-    // QR Scanner
-    scanQR: 'क्यूआर कोड स्कैन करें',
-    alignQR: 'क्यूआर कोड को फ्रेम में रखें',
-    qrDetected: 'क्यूआर कोड मिला!',
-    
-    // Modals - Common
-    cancel: 'रद्द करें',
-    continue: 'जारी रखें',
-    confirm: 'पुष्टि करें',
-    back: 'वापस',
-    done: 'पूर्ण',
-    
-    // Payment Modals
-    enterAmount: 'राशि दर्ज करें',
-    enterPhone: 'फोन नंबर दर्ज करें',
-    enterAccount: 'खाता नंबर दर्ज करें',
-    selectCard: 'कार्ड चुनें',
-    card: 'कार्ड',
-    amount: 'राशि',
-    recipient: 'प्राप्तकर्ता',
-    processing: 'भुगतान प्रक्रियाधीन',
-    success: 'भुगतान सफल',
-    
-    // Card Selection
-    cardNumberMask: '**** {number}',
-    balanceLabel: 'बैलेंस',
-    
-    // Filter
-    all: 'सभी',
-    
-    // Progress text
-    progressFormat: (paid, total) => `भुगतान: ${paid.toLocaleString()} ₽ · शेष: ${(total - paid).toLocaleString()} ₽`,
-    daysFormat: (days) => `${days} दिन`,
-    
-    // Month names for date formatting
-    months: {
-      '01': 'जन',
-      '02': 'फर',
-      '03': 'मार',
-      '04': 'अप्र',
-      '05': 'मई',
-      '06': 'जून',
-      '07': 'जुल',
-      '08': 'अग',
-      '09': 'सित',
-      '10': 'अक्ट',
-      '11': 'नव',
-      '12': 'दिस'
-    },
-    
-    // Helper function for utility names
-    getUtilityName: (key) => {
-      const names = {
-        education: 'शिक्षा',
-        mobile: 'मोबाइल',
-        electricity: 'बिजली',
-        gas: 'गैस',
-        water: 'पानी',
-        internet: 'इंटरनेट',
-        fines: 'जुर्माना',
-        taxes: 'कर'
-      };
-      return names[key] || key;
-    },
-    
-    // Helper function for bank names
-    getBankName: (key) => {
-      const names = {
-        sber: 'स्बेरबैंक',
-        tbank: 'टी-बैंक',
-        alfa: 'अल्फा-बैंक',
-        vtb: 'वीटीबी',
-        gazprom: 'गैज़प्रॉमबैंक',
-        raiffeisen: 'राइफ़ाइज़ेन',
-        otkritie: 'ओटक्रिटी',
-        pochta: 'पोच्टा बैंक'
-      };
-      return names[key] || key;
-    }
-  },
-  
-  ar: {
-    // Header
-    welcome: 'مرحباً بعودتك',
-    userName: 'ألكسندر',
-    search: 'بحث',
-    notifications: 'إشعارات',
-    
-    // Cards
-    balance: 'الرصيد',
-    cardNumber: 'رقم البطاقة',
-    show: 'إظهار',
-    hide: 'إخفاء',
-    debit: 'بطاقة خصم',
-    
-    // Quick Actions
-    quickActions: 'إجراءات سريعة',
-    qrPayment: 'الدفع عبر QR',
-    phonePayment: 'بالهاتف',
-    sbp: 'SBP',
-    transfer: 'تحويل',
-    
-    // SBP / Utilities
-    sbpFull: 'المدفوعات والتحويلات',
-    education: 'تعليم',
-    mobile: 'جوال',
-    electricity: 'كهرباء',
-    gas: 'غاز',
-    water: 'مياه',
-    internet: 'إنترنت',
-    fines: 'غرامات',
-    taxes: 'ضرائب',
-    
-    // Banks
-    selectBank: 'اختر البنك',
-    sberbank: 'سبيربنك',
-    tbank: 'تي-بنك',
-    alfabank: 'ألفا-بنك',
-    vtb: 'في تي بي',
-    gazprombank: 'غازبروم بنك',
-    raiffeisen: 'رايفايزن',
-    otkritie: 'أوتكريتي',
-    pochta: 'بنك البريد',
-    
-    // Analytics
-    analytics: 'التحليلات',
-    thisWeek: 'هذا الأسبوع',
-    thisMonth: 'هذا الشهر',
-    thisYear: 'هذه السنة',
-    income: 'دخل',
-    expenses: 'مصروفات',
-    
-    // Categories
-    food: 'طعام',
-    groceries: 'بقالة',
-    transport: 'مواصلات',
-    entertainment: 'ترفيه',
-    utilities: 'مرافق',
-    
-    // Fixed Deposits (Gamified)
-    savings: 'مدخرات',
-    fixedDeposit: 'وديعة ثابتة',
-    investment: 'استثمارات',
-    goal: 'هدف',
-    current: 'حالي',
-    interest: 'فائدة',
-    streak: 'أيام متتالية',
-    nextMilestone: 'الهدف التالي',
-    leftToGoal: 'متبقي للهدف',
-    replenish: 'إعادة تعبئة',
-    fdName1: 'حساب توفير',
-    fdName2: 'حساب استثماري',
-    
-    // Debt Reminders
-    debtReminder: 'تذكير الديون',
-    mortgage: 'رهن عقاري',
-    educationDebt: 'قرض تعليمي',
-    paid: 'مدفوع',
-    remaining: 'متبقي',
-    monthlyPayment: 'الدفعة الشهرية',
-    nextPayment: 'الدفعة القادمة',
-    days: 'أيام',
-    pay: 'ادفع',
-    
-    // Recent Transactions
-    recentTransactions: 'آخر المعاملات',
-    viewAll: 'عرض الكل',
-    collapse: 'طي',
-    
-    // Bottom Navigation
-    home: 'الرئيسية',
-    payments: 'المدفوعات',
-    history: 'السجل',
-    settings: 'الإعدادات',
-    
-    // QR Scanner
-    scanQR: 'امسح رمز QR',
-    alignQR: 'ضع رمز QR في الإطار',
-    qrDetected: 'تم اكتشاف رمز QR!',
-    
-    // Modals - Common
-    cancel: 'إلغاء',
-    continue: 'متابعة',
-    confirm: 'تأكيد',
-    back: 'رجوع',
-    done: 'تم',
-    
-    // Payment Modals
-    enterAmount: 'أدخل المبلغ',
-    enterPhone: 'أدخل رقم الهاتف',
-    enterAccount: 'أدخل رقم الحساب',
-    selectCard: 'اختر البطاقة',
-    card: 'بطاقة',
-    amount: 'المبلغ',
-    recipient: 'المستلم',
-    processing: 'جاري المعالجة',
-    success: 'تم الدفع بنجاح',
-    
-    // Card Selection
-    cardNumberMask: '**** {number}',
-    balanceLabel: 'الرصيد',
-    
-    // Filter
-    all: 'الكل',
-    
-    // Progress text
-    progressFormat: (paid, total) => `مدفوع: ${paid.toLocaleString()} ₽ · متبقي: ${(total - paid).toLocaleString()} ₽`,
-    daysFormat: (days) => `${days} ${days === 1 ? 'يوم' : 'أيام'}`,
-    
-    // Month names for date formatting (Arabic)
-    months: {
-      '01': 'يناير',
-      '02': 'فبراير',
-      '03': 'مارس',
-      '04': 'أبريل',
-      '05': 'مايو',
-      '06': 'يونيو',
-      '07': 'يوليو',
-      '08': 'أغسطس',
-      '09': 'سبتمبر',
-      '10': 'أكتوبر',
-      '11': 'نوفمبر',
-      '12': 'ديسمبر'
-    },
-    
-    // Helper function for utility names
-    getUtilityName: (key) => {
-      const names = {
-        education: 'تعليم',
-        mobile: 'جوال',
-        electricity: 'كهرباء',
-        gas: 'غاز',
-        water: 'مياه',
-        internet: 'إنترنت',
-        fines: 'غرامات',
-        taxes: 'ضرائب'
-      };
-      return names[key] || key;
-    },
-    
-    // Helper function for bank names
-    getBankName: (key) => {
-      const names = {
-        sber: 'سبيربنك',
-        tbank: 'تي-بنك',
-        alfa: 'ألفا-بنك',
-        vtb: 'في تي بي',
-        gazprom: 'غازبروم بنك',
-        raiffeisen: 'رايفايزن',
-        otkritie: 'أوتكريتي',
-        pochta: 'بنك البريد'
-      };
-      return names[key] || key;
-    }
-  },
-  
-  kk: {
-    // Header
-    welcome: 'Қайта оралуыңызбен',
-    userName: 'Александр',
-    search: 'Іздеу',
-    notifications: 'Хабарландырулар',
-    
-    // Cards
-    balance: 'Баланс',
-    cardNumber: 'Карта нөмірі',
-    show: 'Көрсету',
-    hide: 'Жасыру',
-    debit: 'Дебеттік',
-    
-    // Quick Actions
-    quickActions: 'Жылдам әрекеттер',
-    qrPayment: 'QR төлем',
-    phonePayment: 'Телефон арқылы',
-    sbp: 'СБП',
-    transfer: 'Аударым',
-    
-    // SBP / Utilities
-    sbpFull: 'Төлемдер және аударымдар',
-    education: 'Білім',
-    mobile: 'Мобильді',
-    electricity: 'Электр',
-    gas: 'Газ',
-    water: 'Су',
-    internet: 'Интернет',
-    fines: 'Айыппұлдар',
-    taxes: 'Салықтар',
-    
-    // Banks
-    selectBank: 'Банкті таңдаңыз',
-    sberbank: 'Сбербанк',
-    tbank: 'Т-Банк',
-    alfabank: 'Альфа-Банк',
-    vtb: 'ВТБ',
-    gazprombank: 'Газпромбанк',
-    raiffeisen: 'Райффайзен',
-    otkritie: 'Открытие',
-    pochta: 'Почта Банк',
-    
-    // Analytics
-    analytics: 'Аналитика',
-    thisWeek: 'Осы апта',
-    thisMonth: 'Осы ай',
-    thisYear: 'Осы жыл',
-    income: 'Кіріс',
-    expenses: 'Шығыс',
-    
-    // Categories
-    food: 'Тамақ',
-    groceries: 'Азық-түлік',
-    transport: 'Көлік',
-    entertainment: 'Ойын-сауық',
-    utilities: 'Коммуналдық',
-    
-    // Fixed Deposits (Gamified)
-    savings: 'Жинақ',
-    fixedDeposit: 'Мерзімді салым',
-    investment: 'Инвестиция',
-    goal: 'Мақсат',
-    current: 'Ағымдағы',
-    interest: 'Мөлшерлеме',
-    streak: 'Қатар күндер',
-    nextMilestone: 'Келесі мақсат',
-    leftToGoal: 'Мақсатқа дейін',
-    replenish: 'Толықтыру',
-    fdName1: 'Жинақ шоты',
-    fdName2: 'Инвестициялық шот',
-    
-    // Debt Reminders
-    debtReminder: 'Қарыз ескертуі',
-    mortgage: 'Ипотека',
-    educationDebt: 'Білім қарызы',
-    paid: 'Төленді',
-    remaining: 'Қалдық',
-    monthlyPayment: 'Айлық төлем',
-    nextPayment: 'Келесі төлем',
-    days: 'күн',
-    pay: 'Төлеу',
-    
-    // Recent Transactions
-    recentTransactions: 'Соңғы транзакциялар',
-    viewAll: 'Барлығын көру',
-    collapse: 'Жию',
-    
-    // Bottom Navigation
-    home: 'Басты',
-    payments: 'Төлемдер',
-    history: 'Тарих',
-    settings: 'Баптаулар',
-    
-    // QR Scanner
-    scanQR: 'QR кодты сканерлеу',
-    alignQR: 'QR кодты рамкаға салыңыз',
-    qrDetected: 'QR код табылды!',
-    
-    // Modals - Common
-    cancel: 'Болдырмау',
-    continue: 'Жалғастыру',
-    confirm: 'Растау',
-    back: 'Артқа',
-    done: 'Дайын',
-    
-    // Payment Modals
-    enterAmount: 'Соманы енгізіңіз',
-    enterPhone: 'Телефон нөмірін енгізіңіз',
-    enterAccount: 'Шот нөмірін енгізіңіз',
-    selectCard: 'Картаны таңдаңыз',
-    card: 'Карта',
-    amount: 'Сома',
-    recipient: 'Алушы',
-    processing: 'Төлем өңделуде',
-    success: 'Төлем сәтті',
-    
-    // Card Selection
-    cardNumberMask: '**** {number}',
-    balanceLabel: 'Баланс',
-    
-    // Filter
-    all: 'Барлығы',
-    
-    // Progress text
-    progressFormat: (paid, total) => `Төленді: ${paid.toLocaleString()} ₽ · Қалды: ${(total - paid).toLocaleString()} ₽`,
-    daysFormat: (days) => `${days} күн`,
-    
-    // Month names for date formatting
-    months: {
-      '01': 'қаң',
-      '02': 'ақп',
-      '03': 'нау',
-      '04': 'сәу',
-      '05': 'мам',
-      '06': 'мау',
-      '07': 'шіл',
-      '08': 'там',
-      '09': 'қыр',
-      '10': 'қаз',
-      '11': 'қар',
-      '12': 'жел'
-    },
-    
-    // Helper function for utility names
-    getUtilityName: (key) => {
-      const names = {
-        education: 'Білім',
-        mobile: 'Мобильді',
-        electricity: 'Электр',
-        gas: 'Газ',
-        water: 'Су',
-        internet: 'Интернет',
-        fines: 'Айыппұлдар',
-        taxes: 'Салықтар'
-      };
-      return names[key] || key;
-    },
-    
-    // Helper function for bank names
-    getBankName: (key) => {
-      const names = {
-        sber: 'Сбербанк',
-        tbank: 'Т-Банк',
-        alfa: 'Альфа-Банк',
-        vtb: 'ВТБ',
-        gazprom: 'Газпромбанк',
-        raiffeisen: 'Райффайзен',
-        otkritie: 'Открытие',
-        pochta: 'Почта Банк'
-      };
-      return names[key] || key;
-    }
-  },
-  
-  tg: {
-    // Header
-    welcome: 'Хуш омадед',
-    userName: 'Александр',
-    search: 'Ҷустуҷӯ',
-    notifications: 'Огоҳиҳо',
-    
-    // Cards
-    balance: 'Бақия',
-    cardNumber: 'Рақами корт',
-    show: 'Нишон додан',
-    hide: 'Пинҳон кардан',
-    debit: 'Дебетӣ',
-    
-    // Quick Actions
-    quickActions: 'Амалҳои зуд',
-    qrPayment: 'Пардохти QR',
-    phonePayment: 'Бо телефон',
-    sbp: 'СБП',
-    transfer: 'Интиқол',
-    
-    // SBP / Utilities
-    sbpFull: 'Пардохтҳо ва интиқолҳо',
-    education: 'Маориф',
-    mobile: 'Мобилӣ',
-    electricity: 'Барқ',
-    gas: 'Газ',
-    water: 'Об',
-    internet: 'Интернет',
-    fines: 'Ҷаримаҳо',
-    taxes: 'Андозҳо',
-    
-    // Banks
-    selectBank: 'Бонкро интихоб кунед',
-    sberbank: 'Сбербанк',
-    tbank: 'Т-Банк',
-    alfabank: 'Альфа-Банк',
-    vtb: 'ВТБ',
-    gazprombank: 'Газпромбанк',
-    raiffeisen: 'Райффайзен',
-    otkritie: 'Открытие',
-    pochta: 'Почта Банк',
-    
-    // Analytics
-    analytics: 'Таҳлил',
-    thisWeek: 'Ин ҳафта',
-    thisMonth: 'Ин моҳ',
-    thisYear: 'Имсол',
-    income: 'Даромад',
-    expenses: 'Хароҷот',
-    
-    // Categories
-    food: 'Ғизо',
-    groceries: 'Хӯрокворӣ',
-    transport: 'Нақлиёт',
-    entertainment: 'Фароғат',
-    utilities: 'Коммуналӣ',
-    
-    // Fixed Deposits (Gamified)
-    savings: 'Пасандоз',
-    fixedDeposit: 'Пасандози мӯҳлатдор',
-    investment: 'Сармоягузорӣ',
-    goal: 'Ҳадаф',
-    current: 'Ҷорӣ',
-    interest: 'Фоиз',
-    streak: 'Рӯзҳои пайдарпай',
-    nextMilestone: 'Ҳадафи навбатӣ',
-    leftToGoal: 'То ҳадаф',
-    replenish: 'Пур кардан',
-    fdName1: 'Ҳисоби пасандоз',
-    fdName2: 'Ҳисоби сармоягузорӣ',
-    
-    // Debt Reminders
-    debtReminder: 'Ёдраскунии қарз',
-    mortgage: 'Ипотека',
-    educationDebt: 'Қарзи маориф',
-    paid: 'Пардохт шуд',
-    remaining: 'Боқимонда',
-    monthlyPayment: 'Пардохти моҳона',
-    nextPayment: 'Пардохти навбатӣ',
-    days: 'рӯз',
-    pay: 'Пардохт',
-    
-    // Recent Transactions
-    recentTransactions: 'Амалиёти охирин',
-    viewAll: 'Ҳама',
-    collapse: 'Печондан',
-    
-    // Bottom Navigation
-    home: 'Асосӣ',
-    payments: 'Пардохтҳо',
-    history: 'Таърих',
-    settings: 'Танзимот',
-    
-    // QR Scanner
-    scanQR: 'Рамзи QR-ро скан кунед',
-    alignQR: 'Рамзи QR-ро ба чаҳорчӯба гузоред',
-    qrDetected: 'Рамзи QR ёфт шуд!',
-    
-    // Modals - Common
-    cancel: 'Бекор кардан',
-    continue: 'Давом додан',
-    confirm: 'Тасдиқ',
-    back: 'Бозгашт',
-    done: 'Тайёр',
-    
-    // Payment Modals
-    enterAmount: 'Маблағро ворид кунед',
-    enterPhone: 'Рақами телефонро ворид кунед',
-    enterAccount: 'Рақами ҳисобро ворид кунед',
-    selectCard: 'Кортро интихоб кунед',
-    card: 'Корт',
-    amount: 'Маблағ',
-    recipient: 'Қабулкунанда',
-    processing: 'Коркарди пардохт',
-    success: 'Пардохт муваффақ',
-    
-    // Card Selection
-    cardNumberMask: '**** {number}',
-    balanceLabel: 'Бақия',
-    
-    // Filter
-    all: 'Ҳама',
-    
-    // Progress text
-    progressFormat: (paid, total) => `Пардохт: ${paid.toLocaleString()} ₽ · Боқӣ: ${(total - paid).toLocaleString()} ₽`,
-    daysFormat: (days) => `${days} рӯз`,
-    
-    // Month names for date formatting
-    months: {
-      '01': 'янв',
-      '02': 'фев',
-      '03': 'мар',
-      '04': 'апр',
-      '05': 'май',
-      '06': 'июн',
-      '07': 'июл',
-      '08': 'авг',
-      '09': 'сен',
-      '10': 'окт',
-      '11': 'ноя',
-      '12': 'дек'
-    },
-    
-    // Helper function for utility names
-    getUtilityName: (key) => {
-      const names = {
-        education: 'Маориф',
-        mobile: 'Мобилӣ',
-        electricity: 'Барқ',
-        gas: 'Газ',
-        water: 'Об',
-        internet: 'Интернет',
-        fines: 'Ҷаримаҳо',
-        taxes: 'Андозҳо'
-      };
-      return names[key] || key;
-    },
-    
-    // Helper function for bank names
-    getBankName: (key) => {
-      const names = {
-        sber: 'Сбербанк',
-        tbank: 'Т-Банк',
-        alfa: 'Альфа-Банк',
-        vtb: 'ВТБ',
-        gazprom: 'Газпромбанк',
-        raiffeisen: 'Райффайзен',
-        otkritie: 'Открытие',
-        pochta: 'Почта Банк'
-      };
-      return names[key] || key;
-    }
-  },
-  
-  uz: {
-    // Header
-    welcome: 'Qaytganingiz bilan',
-    userName: 'Aleksandr',
-    search: 'Qidirish',
-    notifications: 'Bildirishnomalar',
-    
-    // Cards
-    balance: 'Balans',
-    cardNumber: 'Karta raqami',
-    show: 'Koʻrsatish',
-    hide: 'Yashirish',
-    debit: 'Debet',
-    
-    // Quick Actions
-    quickActions: 'Tezkor amallar',
-    qrPayment: 'QR toʻlov',
-    phonePayment: 'Telefon orqali',
-    sbp: 'SBP',
-    transfer: 'Pul oʻtkazish',
-    
-    // SBP / Utilities
-    sbpFull: 'Toʻlovlar va oʻtkazmalar',
-    education: 'Taʼlim',
-    mobile: 'Mobil',
-    electricity: 'Elektr',
-    gas: 'Gaz',
-    water: 'Suv',
-    internet: 'Internet',
-    fines: 'Jarimalar',
-    taxes: 'Soliqlar',
-    
-    // Banks
-    selectBank: 'Bankni tanlang',
-    sberbank: 'Sberbank',
-    tbank: 'T-Bank',
-    alfabank: 'Alfa-Bank',
-    vtb: 'VTB',
-    gazprombank: 'Gazprombank',
-    raiffeisen: 'Raiffeisen',
-    otkritie: 'Otkritie',
-    pochta: 'Pochta Bank',
-    
-    // Analytics
-    analytics: 'Tahlillar',
-    thisWeek: 'Shu hafta',
-    thisMonth: 'Shu oy',
-    thisYear: 'Bu yil',
-    income: 'Daromad',
-    expenses: 'Xarajatlar',
-    
-    // Categories
-    food: 'Ovqatlanish',
-    groceries: 'Oziq-ovqat',
-    transport: 'Transport',
-    entertainment: 'Koʻngilochar',
-    utilities: 'Kommunal',
-    
-    // Fixed Deposits (Gamified)
-    savings: 'Jamgʻarma',
-    fixedDeposit: 'Muddatli omonat',
-    investment: 'Investitsiya',
-    goal: 'Maqsad',
-    current: 'Joriy',
-    interest: 'Foiz',
-    streak: 'Ketma-ket kunlar',
-    nextMilestone: 'Keyingi maqsad',
-    leftToGoal: 'Maqsadgacha',
-    replenish: 'Toʻldirish',
-    fdName1: 'Jamgʻarma hisobi',
-    fdName2: 'Investitsiya hisobi',
-    
-    // Debt Reminders
-    debtReminder: 'Qarz eslatmasi',
-    mortgage: 'Ipoteka',
-    educationDebt: 'Taʼlim qarzi',
-    paid: 'Toʻlandi',
-    remaining: 'Qoldiq',
-    monthlyPayment: 'Oylik toʻlov',
-    nextPayment: 'Keyingi toʻlov',
-    days: 'kun',
-    pay: 'Toʻlash',
-    
-    // Recent Transactions
-    recentTransactions: 'Soʻnggi tranzaksiyalar',
-    viewAll: 'Barchasini koʻrish',
-    collapse: 'Yigʻish',
-    
-    // Bottom Navigation
-    home: 'Bosh sahifa',
-    payments: 'Toʻlovlar',
-    history: 'Tarix',
-    settings: 'Sozlamalar',
-    
-    // QR Scanner
-    scanQR: 'QR kodni skanerlash',
-    alignQR: 'QR kodni ramkaga joylashtiring',
-    qrDetected: 'QR kod topildi!',
-    
-    // Modals - Common
-    cancel: 'Bekor qilish',
-    continue: 'Davom etish',
-    confirm: 'Tasdiqlash',
-    back: 'Orqaga',
-    done: 'Tayyor',
-    
-    // Payment Modals
-    enterAmount: 'Miqdorni kiriting',
-    enterPhone: 'Telefon raqamini kiriting',
-    enterAccount: 'Hisob raqamini kiriting',
-    selectCard: 'Kartani tanlang',
-    card: 'Karta',
-    amount: 'Miqdor',
-    recipient: 'Qabul qiluvchi',
-    processing: "Toʻlov amalga oshirilmoqda",
-    success: "Toʻlov muvaffaqiyatli",
-    
-    // Card Selection
-    cardNumberMask: '**** {number}',
-    balanceLabel: 'Balans',
-    
-    // Filter
-    all: 'Barchasi',
-    
-    // Progress text
-    progressFormat: (paid, total) => `Toʻlandi: ${paid.toLocaleString()} ₽ · Qoldi: ${(total - paid).toLocaleString()} ₽`,
-    daysFormat: (days) => `${days} kun`,
-    
-    // Month names for date formatting
-    months: {
-      '01': 'yan',
-      '02': 'fev',
-      '03': 'mar',
-      '04': 'apr',
-      '05': 'may',
-      '06': 'iyn',
-      '07': 'iyl',
-      '08': 'avg',
-      '09': 'sen',
-      '10': 'okt',
-      '11': 'noy',
-      '12': 'dek'
-    },
-    
-    // Helper function for utility names
-    getUtilityName: (key) => {
-      const names = {
-        education: 'Taʼlim',
-        mobile: 'Mobil',
-        electricity: 'Elektr',
-        gas: 'Gaz',
-        water: 'Suv',
-        internet: 'Internet',
-        fines: 'Jarimalar',
-        taxes: 'Soliqlar'
-      };
-      return names[key] || key;
-    },
-    
-    // Helper function for bank names
-    getBankName: (key) => {
-      const names = {
-        sber: 'Sberbank',
-        tbank: 'T-Bank',
-        alfa: 'Alfa-Bank',
-        vtb: 'VTB',
-        gazprom: 'Gazprombank',
-        raiffeisen: 'Raiffeisen',
-        otkritie: 'Otkritie',
-        pochta: 'Pochta Bank'
-      };
-      return names[key] || key;
-    }
-  }
-};
+  };
 
   const t = texts[language] || texts.ru;
 
@@ -1698,8 +1697,41 @@ const texts = {
   // ============= RENDER FUNCTIONS =============
   const renderCardCarousel = () => (
     <div className="cards-section">
+      <div className="cards-header">
+        <h3 className="section-title chartreuse">{t.yourCards}</h3>
+        <div className="cards-controls">
+          <button 
+            className="card-nav-btn prev" 
+            onClick={() => setSelectedCardIndex(prev => prev > 0 ? prev - 1 : cards.length - 1)}
+            disabled={selectedCardIndex === 0}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M15 18L9 12L15 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+          <div className="card-dots">
+            {cards.map((_, index) => (
+              <button
+                key={index}
+                className={`card-dot ${selectedCardIndex === index ? 'active' : ''}`}
+                onClick={() => setSelectedCardIndex(index)}
+              />
+            ))}
+          </div>
+          <button 
+            className="card-nav-btn next" 
+            onClick={() => setSelectedCardIndex(prev => prev < cards.length - 1 ? prev + 1 : 0)}
+            disabled={selectedCardIndex === cards.length - 1}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M9 18L15 12L9 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
       <div className="cards-carousel">
-        <div className="cards-wrapper" style={{ transform: `translateX(calc(-${selectedCardIndex * 100}% - ${selectedCardIndex * 16}px))` }}>
+        <div className="cards-wrapper" style={{ transform: `translateX(-${selectedCardIndex * 100}%)` }}>
           {cards.map((card, index) => (
             <div key={card.id} className="card-item" style={{ background: card.color }}>
               <div className="debit-overlay">{t.debit}</div>
@@ -1734,16 +1766,6 @@ const texts = {
                 <MirChip />
               </div>
             </div>
-          ))}
-        </div>
-        
-        <div className="card-dots">
-          {cards.map((_, index) => (
-            <button
-              key={index}
-              className={`card-dot ${selectedCardIndex === index ? 'active' : ''}`}
-              onClick={() => setSelectedCardIndex(index)}
-            />
           ))}
         </div>
       </div>
@@ -1796,26 +1818,12 @@ const texts = {
             onClick={() => handleSbpPayment(util)}
           >
             <UtilityIcon type={util.icon} />
-            <span className="utility-name">{getUtilityName(util.key)}</span>
+            <span className="utility-name">{t.getUtilityName(util.key)}</span>
           </button>
         ))}
       </div>
     </div>
   );
-
-  const getUtilityName = (key) => {
-    const names = {
-      education: t.education,
-      mobile: t.mobile,
-      electricity: t.electricity,
-      gas: t.gas,
-      water: t.water,
-      internet: t.internet,
-      fines: t.fines,
-      taxes: t.taxes
-    };
-    return names[key] || key;
-  };
 
   const renderAnalytics = () => {
     const expenseTotal = getExpenseTotal();
@@ -2092,7 +2100,7 @@ const texts = {
       {activeModal === 'sbp-banks' && !selectedBank && (
         <Modal onClose={closeModal}>
           <div className="modal-step">
-            <h2 className="step-title chartreuse">Выберите банк</h2>
+            <h2 className="step-title chartreuse">{t.selectBank}</h2>
             <div className="banks-grid modal-grid">
               {sbpBanks.map(bank => (
                 <button
@@ -2103,7 +2111,7 @@ const texts = {
                   }}
                 >
                   <BankIcon name={bank.icon} />
-                  <span className="bank-name">{bank.name}</span>
+                  <span className="bank-name">{t.getBankName(bank.icon)}</span>
                 </button>
               ))}
             </div>
@@ -2127,7 +2135,7 @@ const texts = {
       {activeModal === 'sbp-banks' && selectedBank && paymentStep === 'amount' && (
         <Modal onClose={closeModal}>
           <PaymentAmountStep
-            title={selectedBank?.name}
+            title={t.getBankName(selectedBank?.icon)}
             amount={paymentAmount}
             setAmount={setPaymentAmount}
             onNext={() => setPaymentStep('card')}
@@ -2162,7 +2170,7 @@ const texts = {
           <SuccessStep 
             amount={paymentAmount}
             card={cards.find(c => c.id === selectedPaymentCard)}
-            recipient={`${selectedBank?.name} · +7 ${phoneNumber}`}
+            recipient={`${t.getBankName(selectedBank?.icon)} · +7 ${phoneNumber}`}
             onDone={closeModal}
             t={t}
           />
@@ -2182,7 +2190,7 @@ const texts = {
                   onClick={() => handleSbpPayment(util)}
                 >
                   <UtilityIcon type={util.icon} />
-                  <span className="utility-name">{getUtilityName(util.key)}</span>
+                  <span className="utility-name">{t.getUtilityName(util.key)}</span>
                 </button>
               ))}
             </div>
@@ -2195,7 +2203,7 @@ const texts = {
         <Modal onClose={closeModal}>
           {paymentStep === 'account' && (
             <AccountNumberStep
-              title={getUtilityName(selectedUtility?.key)}
+              title={t.getUtilityName(selectedUtility?.key)}
               accountNumber={utilityAccount}
               setAccountNumber={setUtilityAccount}
               onNext={() => setPaymentStep('amount')}
@@ -2206,7 +2214,7 @@ const texts = {
 
           {paymentStep === 'amount' && (
             <PaymentAmountStep
-              title={getUtilityName(selectedUtility?.key)}
+              title={t.getUtilityName(selectedUtility?.key)}
               amount={paymentAmount}
               setAmount={setPaymentAmount}
               onNext={() => setPaymentStep('card')}
@@ -2235,7 +2243,7 @@ const texts = {
             <SuccessStep 
               amount={paymentAmount}
               card={cards.find(c => c.id === selectedPaymentCard)}
-              recipient={getUtilityName(selectedUtility?.key)}
+              recipient={t.getUtilityName(selectedUtility?.key)}
               onDone={closeModal}
               t={t}
             />
