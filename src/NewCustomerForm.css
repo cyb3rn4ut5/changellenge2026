@@ -1,0 +1,284 @@
+.new-customer-container {
+  min-height: 100vh;
+  background: var(--grey-900);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+.form-card {
+  background: var(--grey-800);
+  border-radius: 24px;
+  padding: 32px 24px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-title {
+  color: #7FFF00;
+  font-size: clamp(24px, 6vw, 28px);
+  font-weight: 400;
+  margin-bottom: 32px;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.customer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.form-group input,
+.form-group select {
+  background: var(--grey-700);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 16px;
+  color: var(--white);
+  font-size: 16px;
+  transition: all 0.3s ease;
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #7FFF00;
+  background: var(--grey-600);
+}
+
+.form-group input.error,
+.form-group select.error {
+  border-color: #ff4444;
+}
+
+.form-group input::placeholder {
+  color: var(--grey-600);
+}
+
+.error-text {
+  color: #ff4444;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* Select dropdown arrow */
+.form-group select {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 20px;
+  padding-right: 48px;
+}
+
+/* RTL support for Arabic */
+[dir="rtl"] .form-group select {
+  background-position: left 16px center;
+  padding-right: 16px;
+  padding-left: 48px;
+}
+
+.submit-button {
+  background: #7FFF00;
+  color: #000000;
+  border: none;
+  border-radius: 12px;
+  padding: 18px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.submit-button:hover {
+  background: #6EDF00;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(127, 255, 0, 0.2);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+/* Mobile optimization */
+@media (max-width: 480px) {
+  .form-card {
+    padding: 24px 16px;
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 14px;
+    font-size: 15px;
+  }
+  
+  .submit-button {
+    padding: 16px;
+  }
+}
+
+/* Handle notches */
+@supports (padding: max(0px)) {
+  .new-customer-container {
+    padding-left: max(20px, env(safe-area-inset-left));
+    padding-right: max(20px, env(safe-area-inset-right));
+  }
+}
+
+/* Loading state for country dropdown */
+.loading-select {
+  background: var(--grey-700);
+  border-radius: 12px;
+  padding: 16px;
+  color: var(--white);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0.8;
+}
+
+.loading-spinner-small {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--grey-600);
+  border-top-color: #7FFF00;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Make dropdown scrollable and styled */
+select {
+  max-height: 300px;
+  overflow-y: auto;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 20px;
+  padding-right: 48px;
+}
+
+[dir="rtl"] select {
+  background-position: left 16px center;
+  padding-right: 16px;
+  padding-left: 48px;
+}
+
+select option {
+  background: var(--grey-800);
+  color: white;
+  padding: 12px;
+}
+
+/* API Error Message */
+.api-error-message {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #ffa500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Loading state for country dropdown */
+.loading-select {
+  background: var(--grey-700);
+  border-radius: 12px;
+  padding: 16px;
+  color: var(--white);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0.8;
+}
+
+.loading-spinner-small {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--grey-600);
+  border-top-color: #7FFF00;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Make dropdown scrollable and styled */
+select {
+  max-height: 300px;
+  overflow-y: auto;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 20px;
+  padding-right: 48px;
+}
+
+[dir="rtl"] select {
+  background-position: left 16px center;
+  padding-right: 16px;
+  padding-left: 48px;
+}
+
+select option {
+  background: var(--grey-800);
+  color: white;
+  padding: 12px;
+}
+
+.phone-input {
+  font-family: monospace;
+  letter-spacing: 0.5px;
+}
+
+.phone-hint {
+  font-size: 11px;
+  color: var(--grey-600);
+  margin-top: 4px;
+  display: block;
+}

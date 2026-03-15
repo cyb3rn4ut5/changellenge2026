@@ -1,0 +1,111 @@
+.blobs-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.blob {
+  position: absolute;
+  background: #7FFF00;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.08; /* Reduced from 0.15 */
+  animation: floatBlob 20s ease infinite;
+}
+
+.blob-1 {
+  width: 500px;
+  height: 500px;
+  top: -100px;
+  right: -100px;
+  animation-duration: 25s;
+  opacity: 0.06; /* Even more subtle */
+}
+
+.blob-2 {
+  width: 600px;
+  height: 600px;
+  bottom: -200px;
+  left: -200px;
+  animation-duration: 30s;
+  animation-delay: -5s;
+  opacity: 0.04;
+}
+
+.blob-3 {
+  width: 400px;
+  height: 400px;
+  top: 30%;
+  left: 20%;
+  animation-duration: 22s;
+  animation-delay: -10s;
+  opacity: 0.05;
+}
+
+.blob-4 {
+  width: 350px;
+  height: 350px;
+  bottom: 20%;
+  right: 15%;
+  animation-duration: 28s;
+  animation-delay: -15s;
+  opacity: 0.03;
+}
+
+@keyframes floatBlob {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  50% {
+    transform: translate(-20px, 40px) scale(0.9);
+  }
+  75% {
+    transform: translate(40px, 20px) scale(1.05);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .blob-1 {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .blob-2 {
+    width: 350px;
+    height: 350px;
+  }
+  
+  .blob-3 {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .blob-4 {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .blob {
+    filter: blur(40px);
+    opacity: 0.04; /* Even more subtle on mobile */
+  }
+}
+
+/* Reduce motion if user prefers */
+@media (prefers-reduced-motion: reduce) {
+  .blob {
+    animation: none;
+  }
+}

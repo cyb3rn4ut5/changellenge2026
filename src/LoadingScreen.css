@@ -1,0 +1,123 @@
+.apple-loading {
+  min-height: 100vh;
+  background: transparent; /* Changed from black to transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+.loading-content {
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  padding: 0 16px;
+  white-space: nowrap;
+}
+
+.greeting {
+  font-size: clamp(32px, 6vw, 48px);
+  font-weight: 300;
+  color: #ffffff;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: opacity;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.greeting.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.greeting.hidden {
+  opacity: 0;
+  transform: translateY(5px);
+}
+
+/* Individual language adjustments for long text */
+[lang="ru"] .greeting {
+  font-size: clamp(28px, 5vw, 44px);
+}
+
+[lang="kk"] .greeting {
+  font-size: clamp(26px, 4.8vw, 42px);
+}
+
+[lang="ar"] .greeting {
+  font-size: clamp(30px, 5.5vw, 46px);
+  flex-direction: row-reverse;
+}
+
+.footer-message {
+  color: #7FFF00;
+  font-size: clamp(13px, 2.5vw, 15px);
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  opacity: 0.7;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 5px;
+  max-width: 100%;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 480px) {
+  .loading-content {
+    max-width: 100%;
+  }
+  
+  .greeting {
+    font-size: clamp(28px, 7vw, 36px);
+    gap: 6px;
+  }
+  
+  [lang="ru"] .greeting,
+  [lang="kk"] .greeting {
+    font-size: clamp(24px, 6vw, 32px);
+  }
+  
+  .footer-message {
+    font-size: 12px;
+  }
+}
+
+/* Handle notches */
+@supports (padding: max(0px)) {
+  .apple-loading {
+    padding-left: max(20px, env(safe-area-inset-left));
+    padding-right: max(20px, env(safe-area-inset-right));
+  }
+}
+
+/* Landscape warning */
+@media (orientation: landscape) and (max-height: 600px) {
+  .apple-loading {
+    display: none;
+  }
+}
+
+/* Optimize for very small devices */
+@media (max-width: 320px) {
+  .greeting {
+    font-size: 24px;
+    gap: 4px;
+  }
+  
+  .footer-message {
+    font-size: 11px;
+  }
+}

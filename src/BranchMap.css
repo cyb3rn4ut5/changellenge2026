@@ -1,0 +1,339 @@
+.branch-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  padding-top: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.branch-card {
+  background: var(--grey-800);
+  border-radius: 32px;
+  padding: 32px 24px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(127, 255, 0, 0.1);
+  animation: slideUp 0.5s ease;
+}
+
+.branch-title {
+  font-size: clamp(24px, 6vw, 28px);
+  font-weight: 500;
+  color: #7FFF00;
+  margin: 20px 0 24px;
+  text-align: center;
+}
+
+/* Map Container */
+.map-container {
+  margin-bottom: 24px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--grey-900);
+  border: 1px solid var(--grey-700);
+  height: 300px;
+  filter: brightness(0.8) contrast(1.2) hue-rotate(5deg);
+}
+
+.static-map {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(135deg, #2A2A2A 0%, #1A1A1A 100%);
+  overflow: hidden;
+}
+
+.map-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+}
+
+.grid-line {
+  position: absolute;
+  background: #7FFF00;
+  opacity: 0.2;
+}
+
+.grid-line.horizontal {
+  width: 100%;
+  height: 1px;
+  left: 0;
+}
+
+.grid-line.vertical {
+  width: 1px;
+  height: 100%;
+  top: 0;
+}
+
+.map-marker {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.marker-dot {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: #7FFF00;
+  border: 3px solid var(--white);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+.map-marker.selected .marker-dot {
+  transform: scale(1.3);
+  background: var(--white);
+  border-color: #7FFF00;
+  box-shadow: 0 0 15px #7FFF00;
+}
+
+.marker-label {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--grey-800);
+  color: white;
+  font-size: 10px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  white-space: nowrap;
+  border: 1px solid #7FFF00;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  margin-bottom: 8px;
+}
+
+.map-marker:hover .marker-label {
+  opacity: 1;
+}
+
+.map-caption {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  color: var(--grey-600);
+  font-size: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+/* Metro Filter */
+.metro-filter {
+  margin-bottom: 20px;
+}
+
+.metro-filter label {
+  display: block;
+  color: var(--white);
+  font-size: 14px;
+  margin-bottom: 8px;
+  opacity: 0.8;
+}
+
+.metro-select {
+  width: 100%;
+  background: var(--grey-700);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 14px;
+  color: var(--white);
+  font-size: 15px;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 20px;
+  cursor: pointer;
+}
+
+.metro-select:focus {
+  outline: none;
+  border-color: #7FFF00;
+}
+
+/* Branches List */
+.branches-list {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  padding-right: 4px;
+}
+
+.branches-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.branches-list::-webkit-scrollbar-track {
+  background: var(--grey-700);
+  border-radius: 4px;
+}
+
+.branches-list::-webkit-scrollbar-thumb {
+  background: #7FFF00;
+  border-radius: 4px;
+}
+
+.branch-item {
+  width: 100%;
+  background: var(--grey-700);
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.branch-item:hover {
+  transform: translateY(-2px);
+  border-color: #7FFF00;
+}
+
+.branch-item.selected {
+  border-color: #7FFF00;
+  background: rgba(127, 255, 0, 0.1);
+}
+
+.branch-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.branch-item-name {
+  color: #7FFF00;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.checkmark {
+  color: #7FFF00;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.branch-item-address {
+  color: var(--white);
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 6px;
+}
+
+.branch-item-metro {
+  color: var(--grey-600);
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Branch Details */
+.branch-details {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--grey-600);
+}
+
+.branch-detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.detail-label {
+  color: #7FFF00;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.branch-detail-item span:last-child {
+  color: var(--white);
+  font-size: 13px;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+/* Confirm Button */
+.confirm-button {
+  width: 100%;
+  background: #7FFF00;
+  color: var(--black);
+  border: none;
+  border-radius: 16px;
+  padding: 18px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  margin-top: 16px;
+}
+
+.confirm-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(127, 255, 0, 0.3);
+}
+
+/* RTL Support */
+[dir="rtl"] .branch-item {
+  text-align: right;
+}
+
+[dir="rtl"] .metro-select {
+  background-position: left 16px center;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Optimization */
+@media (max-width: 480px) {
+  .branch-card {
+    padding: 24px 16px;
+  }
+  
+  .static-map {
+    height: 200px;
+  }
+  
+  .marker-label {
+    font-size: 8px;
+    padding: 2px 6px;
+  }
+  
+  .branches-list {
+    max-height: 250px;
+  }
+}
